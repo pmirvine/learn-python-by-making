@@ -1,0 +1,37 @@
+[project]
+name = "adventure"
+version = "0.1.0"
+description = "The Colossal Cupboard, third edition: a full-screen terminal front end for any text adventure."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "cupboard",
+    "textual>=8,<9",
+]
+
+[project.scripts]
+adventure = "adventure.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.12.17,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv.sources]
+cupboard = { path = "../05-colossal-cupboard", editable = true }
+
+[tool.pytest]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+
+[tool.pyright]
+include = ["src"]
+typeCheckingMode = "strict"
+
+[dependency-groups]
+dev = [
+    "pyright>=1.1.414",
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+    "pytest-textual-snapshot>=1.0.0",
+    "ruff>=0.16.8",
+]

@@ -1,0 +1,62 @@
+/* The story on the left, with the prompt beneath it, and the panels on the right. */
+
+#story {
+    width: 1fr;
+}
+
+#transcript {
+    height: 1fr;
+    padding: 0 1;
+    scrollbar-size-vertical: 1;
+}
+
+#prompt {
+    dock: bottom;
+}
+
+#side {
+    width: 38;
+}
+
+MapPanel, StatusPanel {
+    border: round $primary;
+    border-title-color: $text;
+    padding: 0 1;
+}
+
+MapPanel {
+    height: 1fr;
+    color: $success;
+    content-align: center middle;
+}
+
+StatusPanel {
+    height: auto;
+}
+
+TheEnd {
+    align: center middle;
+}
+
+#ending {
+    width: 44;
+    height: auto;
+    border: thick $success;
+    background: $surface;
+    padding: 1 2;
+}
+
+#ending Label {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1;
+}
+
+#buttons {
+    height: auto;
+    align: center middle;
+}
+
+#buttons Button {
+    margin: 0 1;
+}
