@@ -134,7 +134,28 @@ def significant(text: str) -> list[str]:
     return [ln for ln in lines if not ln.startswith(("Traceback", "  "))]
 
 
+def project_sources(path: Path) -> list[str]:
+    """The src folders of the project a chapter is about: p06-life.md -> projects/06-*/src."""
+    found = re.match(r"p(\d\d)-", path.name)
+    if not found:
+        return []
+    return [str(src) for src in (ROOT / "projects").glob(f"{found[1]}-*/src")]
+
+
 def check_file(path: Path) -> list[str]:
+    """Check one chapter, with its own project's packages importable in REPL sessions."""
+    sources = project_sources(path)
+    before = set(sys.modules)
+    sys.path[:0] = sources
+    try:
+        return check_blocks(path)
+    finally:
+        del sys.path[: len(sources)]
+        for name in set(sys.modules) - before:
+            del sys.modules[name]
+
+
+def check_blocks(path: Path) -> list[str]:
     problems: list[str] = []
     parser = doctest.DocTestParser()
     runner = doctest.DocTestRunner(optionflags=doctest.ELLIPSIS)

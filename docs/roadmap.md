@@ -29,7 +29,7 @@ The same ideas return in each medium, so you feel what good structure buys you.
 | :material-check: | [3 · Dice Lab](part-1-console/p03-dice-lab.md) — probability with text histograms | Lists, dicts, `Counter`, comprehensions, slicing, type hints | pytest; ruff |
 | :material-check: | [4 · Codebreaker](part-1-console/p04-codebreaker.md) — Mastermind meets Wordle, in colour | Strings and Unicode, sets, mutability and aliasing, `is` and `==` | Undoing things in Git; first bug hunt |
 | :material-check: | [5 · The Colossal Cupboard](part-1-console/p05-colossal-cupboard.md) — a text adventure | Dataclasses, enums, `match`, modules, exceptions, files and JSON | Packaged layout; branches |
-| | 6 · Life — Conway's Game of Life in the terminal | Sets of tuples, generators, itertools, command-line arguments | GitHub; parametrised tests |
+| :material-check: | [6 · Life](part-1-console/p06-life.md) — Conway's Game of Life in the terminal | Sets of tuples, generators, itertools, command-line arguments | GitHub; parametrised tests |
 | | 7 · Fractal Factory — Mandelbrot and friends, to PNG | Numbers in depth, first-class functions, closures, `*args` and `**kwargs` | Profiling; tags |
 
 ## Part 2 · Pygame: objects in motion
