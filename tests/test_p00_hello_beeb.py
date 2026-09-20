@@ -21,6 +21,7 @@ def test_inline_dependency_script_runs(request):
         capture_output=True,
         text=True,
         timeout=120,
+        check=False,
     )
     assert result.returncode == 0, result.stderr
     assert "Computer" in result.stdout

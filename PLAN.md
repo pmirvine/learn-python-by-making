@@ -1,6 +1,6 @@
 # Learn Python by Making — plan
 
-*Status: plan approved 20 September 2026. Stage A (pilot) in progress.*
+*Status: plan approved 20 September 2026. Stage A (pilot) written and awaiting review. See §10 for what the pilot changed.*
 
 A project-based Python tutorial for people who can already program a little but are new to Python, and who want a thorough grasp of the language *and* of professional practice (Git, VS Code, uv, testing, typing, packaging). Every project produces something you can see or hear, in the spirit of typing `MOVE`, `DRAW` and `SOUND` into a BBC Micro.
 
@@ -204,3 +204,17 @@ You review voice, depth, length and format. I revise until you're happy.
 - Licence: **CC BY-SA 4.0** (prose) **+ MIT** (code).
 - Updating uv on this machine: **approved**.
 - Addition: the capstone micro gets **sprites with collision detection** (see P28).
+
+## 10. What the pilot taught us
+
+Decisions made while building Stage A. Each departs from, or sharpens, something above.
+
+- **Ruff: use the defaults.** §2 proposed starting readers on a small hand-picked rule set, because ruff 0.16 raised its defaults to 413 rules. In practice, clean tutorial code passes the new defaults untouched, so readers simply use ruff as it comes. Two defaults are worth teaching when they first fire: `zip(..., strict=True)` (B905) and `__all__` for re-exports (F401).
+- **Listings are inline and checked, not included.** §7 suggested pulling listings from the real files with snippet includes. That would leave `--8<--` lines where the code should be when the Markdown is read on GitHub. Instead the code is written inline, and `scripts/check_docs.py` verifies it: marked listings must match their file, `pycon` sessions run as doctests, and every Predict snippet is executed and compared with its published answer. It has already caught real mistakes.
+- **Early projects are tested from outside.** Projects 0 to 2 come before the tutorial teaches pytest, so their folders hold no tests, exactly like a reader's. Repo-level tests in `tests/` drive them with scripted input. `tests/headless.py` runs any Pygame program for N frames with no display, for all the games to come.
+- **No root ruff config.** A `[tool.ruff]` table in the root `pyproject.toml` silently takes over import sorting inside every project. Each project is linted from its own folder, as a reader's copy would be.
+- **`uv init` copies your Git name and email into `pyproject.toml`** for packaged projects. The reference projects omit `authors`. Project 5, where readers first meet the packaged layout, should mention it.
+- **`beeb` design.** PEP 8 names (`beeb.move`, not `MOVE`), with the namespace kept (`import beeb`). The canvas is an 8-bit *palettised* surface at the mode's true resolution, scaled into a resizable window each frame: pixels hold colour numbers, as on the real hardware, which makes `POINT`, palette changes and flashing colours nearly free. `beeb.vsync()` hides the event loop. `PLOT k, x, y` is decoded with `divmod` and `match`.
+- **The paint-program bug is real.** The first version of `paint.py` was written in good faith and drew fans from the corner, because the colour swatch moves the shared graphics cursor. It is kept as a stage, since it is a better demonstration of "module-level state hurts" than anything contrived.
+- **Chapter length.** Project 1 is about 5,400 words and Project 8 about 8,800, listings included. Project 8 is long because it contains a 200-line module in full. Later Pygame chapters build on `beeb` and should be shorter.
+- **Open for the author:** the repository's eventual URL (for `site_url` in `zensical.toml` and for links to solutions), and whether the default Zensical theme wants a more retro look.

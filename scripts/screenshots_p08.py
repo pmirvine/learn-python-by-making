@@ -69,7 +69,13 @@ def run(script: str, frames: int, shot: str, *, raw: bool = False) -> None:
 def scripted_painting() -> None:
     """Drive paint.py with a fake mouse and keyboard, to paint a little scene."""
     strokes: list[tuple[str, list[tuple[int, int]]]] = [
-        ("3", [(1000 + int(90 * math.cos(a / 5)), 800 + int(90 * math.sin(a / 5))) for a in range(33)]),
+        (
+            "3",
+            [
+                (1000 + int(90 * math.cos(a / 5)), 800 + int(90 * math.sin(a / 5)))
+                for a in range(33)
+            ],
+        ),
         ("2", [(x, 250 + int(60 * math.sin(x / 90))) for x in range(0, 1280, 16)]),
         ("1", [(300, 280), (300, 560), (620, 560), (620, 280)]),
         ("5", [(260, 560), (460, 760), (660, 560)]),

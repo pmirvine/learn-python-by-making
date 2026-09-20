@@ -53,6 +53,7 @@ def test_program_runs_for_a_hundred_frames(script):
         capture_output=True,
         text=True,
         timeout=60,
+        check=False,
     )
     assert result.returncode == 0, result.stderr
 
@@ -65,6 +66,7 @@ def test_the_test_card_runs(tmp_path):
         capture_output=True,
         text=True,
         timeout=60,
+        check=False,
     )
     assert result.returncode == 0, result.stderr
 
@@ -100,10 +102,12 @@ def test_the_bug_hunt_file_really_has_the_bug():
 
 
 SOLUTIONS_CHECK = """
+from pathlib import Path
+
 import beeb
 
 beeb.mode(2)
-assert beeb.__file__.endswith("solutions/beeb/__init__.py"), beeb.__file__
+assert Path(beeb.__file__).parts[-3:-1] == ("solutions", "beeb"), beeb.__file__
 
 # colour(): everything drawn in colour 1 turns blue at a stroke.
 beeb.gcol(0, 1)
@@ -138,5 +142,6 @@ def test_solutions_package():
         capture_output=True,
         text=True,
         timeout=60,
+        check=False,
     )
     assert result.returncode == 0, result.stderr

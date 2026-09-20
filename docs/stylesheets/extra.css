@@ -1,0 +1,11 @@
+/* Screenshots of a chunky 1980s display should stay chunky when scaled. */
+img.pixels {
+  image-rendering: pixelated;
+  border: 12px solid #111;
+  border-radius: 6px;
+}
+
+/* Keep the labels in a chapter's summary table (its first column) on one line. */
+.md-typeset table:not([class]) td:first-child strong {
+  white-space: nowrap;
+}

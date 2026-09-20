@@ -19,7 +19,9 @@ failures: list[str] = []
 
 def run(label: str, command: list[str | Path], cwd: Path) -> None:
     print(f"  {label:<28}", end="", flush=True)
-    result = subprocess.run(command, cwd=cwd, capture_output=True, text=True)
+    result = subprocess.run(
+        command, cwd=cwd, capture_output=True, text=True, check=False
+    )
     if result.returncode == 0:
         print("ok")
         return
@@ -44,7 +46,16 @@ def check_project(project: Path) -> None:
 
     repo_tests = sorted((ROOT / "tests").glob(f"test_p{number}_*.py"))
     if repo_tests:
-        command = ["uv", "run", "--project", project, "--with", "pytest", "pytest", "-q"]
+        command = [
+            "uv",
+            "run",
+            "--project",
+            project,
+            "--with",
+            "pytest",
+            "pytest",
+            "-q",
+        ]
         run("repo-level tests", [*command, *repo_tests], ROOT)
 
 

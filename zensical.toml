@@ -1,0 +1,87 @@
+# Configuration for the tutorial's website, built with Zensical.
+#
+#   uv run zensical serve     preview at http://localhost:8000, rebuilding as you edit
+#   uv run zensical build     write the finished site to site/
+
+[project]
+site_name = "Learn Python by Making"
+site_description = "A project-based Python tutorial: console, Pygame, web and terminal apps, with a BBC Micro accent."
+# Set this once the repository has a home, e.g. "https://<user>.github.io/<repo>/"
+# site_url = ""
+copyright = "Text: CC BY-SA 4.0. Code: MIT."
+extra_css = ["stylesheets/extra.css"]
+
+nav = [
+  { "Welcome" = "index.md" },
+  { "Roadmap" = "roadmap.md" },
+  { "Part 0 · Switching on" = [
+    { "How to use this tutorial" = "part-0-switching-on/how-to-use.md" },
+    { "The toolkit" = "part-0-switching-on/toolkit.md" },
+    { "Project 0 · Hello, Beeb" = "part-0-switching-on/p00-hello-beeb.md" },
+  ] },
+  { "Part 1 · Console" = [
+    { "Project 1 · Hi-Lo" = "part-1-console/p01-hi-lo.md" },
+  ] },
+  { "Part 2 · Pygame" = [
+    { "Project 8 · Mode 2 Sketchpad" = "part-2-pygame/p08-mode2-sketchpad.md" },
+  ] },
+]
+
+[project.theme]
+language = "en"
+features = [
+  "content.code.annotate",
+  "content.code.copy",
+  "content.tabs.link",
+  "content.tooltips",
+  "navigation.footer",
+  "navigation.instant",
+  "navigation.path",
+  "navigation.sections",
+  "navigation.top",
+  "navigation.tracking",
+  "search.highlight",
+]
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme)"
+toggle.icon = "lucide/sun-moon"
+toggle.name = "Switch to light mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to system preference"
+
+[project.markdown_extensions]
+abbr = {}
+admonition = {}
+attr_list = {}
+def_list = {}
+footnotes = {}
+md_in_html = {}
+tables = {}
+toc.permalink = true
+pymdownx.betterem = {}
+pymdownx.details = {}
+pymdownx.emoji.emoji_generator = "zensical.extensions.emoji.to_svg"
+pymdownx.emoji.emoji_index = "zensical.extensions.emoji.twemoji"
+pymdownx.highlight.anchor_linenums = true
+pymdownx.highlight.line_spans = "__span"
+pymdownx.highlight.pygments_lang_class = true
+pymdownx.inlinehilite = {}
+pymdownx.keys = {}
+pymdownx.mark = {}
+pymdownx.smartsymbols = {}
+pymdownx.superfences = {}
+pymdownx.tabbed.alternate_style = true
+pymdownx.tabbed.combine_header_slug = true
+pymdownx.tasklist.custom_checkbox = true
+pymdownx.tilde = {}
