@@ -40,8 +40,7 @@ The capstone pulls it together: a little computer of your own, in a window, that
 
 The [roadmap](roadmap.md) lists every project.
 
-!!! note "This is a work in progress"
-    The tutorial is being written now. Part 0, Project 1 and Project 8 are here as a pilot. The roadmap shows what's coming.
+If you're coming from BBC BASIC, from JavaScript, from C# or Java, or from C, there's [an appendix for you](appendices/coming-from.md), and when something goes wrong that isn't your program's fault, there's [troubleshooting](appendices/troubleshooting.md).
 
 ## Start here
 

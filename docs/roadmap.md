@@ -2,7 +2,7 @@
 
 Twenty-eight projects in six parts. Do them in order: each leans on the ones before, and some come back later in a new form.
 
-Projects marked :material-check: are written. The rest are on their way.
+Every project is written, and every one is checked, by running it, whenever the tutorial changes.
 
 ## Three projects that keep coming back
 
@@ -83,4 +83,4 @@ The same ideas return in each medium, so you feel what good structure buys you.
 
 ## Appendices
 
-Python for BBC BASIC programmers · sheets for people coming from JavaScript, C#, Java and C · the gotchas gallery · Git, uv and VS Code cheat sheets · an index of which project teaches what · troubleshooting · glossary.
+[Python for BBC BASIC programmers](appendices/bbc-basic.md) · [sheets for people coming from JavaScript, C#, Java and C](appendices/coming-from.md) · [the gotchas gallery](appendices/gotchas.md) · [Git, uv and VS Code cheat sheets](appendices/cheat-sheets.md) · [an index of which project teaches what](appendices/concept-index.md) · [troubleshooting](appendices/troubleshooting.md) · [a glossary](appendices/glossary.md) · [what's new in Python 3.15](appendices/whats-new-315.md).

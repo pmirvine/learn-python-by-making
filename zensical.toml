@@ -64,6 +64,16 @@ nav = [
     { "Project 28 · Boot to BASIC" = "part-6-shipping/p28-boot-to-basic.md" },
     { "Where next" = "part-6-shipping/where-next.md" },
   ] },
+  { "Appendices" = [
+    { "Python for BBC BASIC programmers" = "appendices/bbc-basic.md" },
+    { "Coming from another language" = "appendices/coming-from.md" },
+    { "The gotchas gallery" = "appendices/gotchas.md" },
+    { "Cheat sheets" = "appendices/cheat-sheets.md" },
+    { "Which project teaches what" = "appendices/concept-index.md" },
+    { "Troubleshooting" = "appendices/troubleshooting.md" },
+    { "Glossary" = "appendices/glossary.md" },
+    { "What's new in Python 3.15" = "appendices/whats-new-315.md" },
+  ] },
 ]
 
 [project.theme]

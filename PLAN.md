@@ -1,6 +1,6 @@
 # Learn Python by Making — plan
 
-*Status: plan approved 20 September 2026. Stage A (pilot) written and awaiting review. See §10 for what the pilot changed.*
+*Status: complete. Plan approved 20 September 2026; the pilot (Stage A) was reviewed and approved; every chapter, the briefs and the appendices are now written. See §10 for what the pilot changed, `LEDGER.md` for what each chapter actually taught, and the README for what hasn't been verified first-hand.*
 
 A project-based Python tutorial for people who can already program a little but are new to Python, and who want a thorough grasp of the language *and* of professional practice (Git, VS Code, uv, testing, typing, packaging). Every project produces something you can see or hear, in the spirit of typing `MOVE`, `DRAW` and `SOUND` into a BBC Micro.
 

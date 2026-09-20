@@ -36,8 +36,9 @@ Every chapter follows the same pattern: *Predict* the output of a few snippets; 
 
 | | |
 |---|---|
-| Written | **Part 0** (How to use this tutorial · The toolkit · Project 0) · **Part 1, complete** (Hi-Lo, Turtle Sketchbook, Dice Lab, Codebreaker, The Colossal Cupboard, Life, Fractal Factory) · **Part 2, complete** (Mode 2 Sketchpad, Snake, Breakout, SOUND & ENVELOPE, Asteroids, Life in Pixels, Wireframe, Sprite Editor, and the Pyxel side quest) · **Part 3, complete** (Logo, Tiny BASIC) · **Part 4, complete** (SVG Plotter, PyFax, PyFax Live, Adventure Online, High Score Server, and the "Share it" bonus) · **Part 5, complete** (Rich Dashboard, Teletext Viewer, Newsroom, Adventure Third Edition) |
-| In progress | The appendices |
+| Written | **Everything**: Part 0 (How to use this tutorial · The toolkit · Project 0), Parts 1 to 6 (Projects 1 to 28, with the Pyxel side quest and the "Share it" bonus), the "Where next" briefs, and eight appendices |
+| Checked | Every project's code, tests, listings, REPL sessions and Predict answers, on every push, on Linux and Windows. macOS is where it was written |
+| Not yet verified first-hand | VS Code's user-interface steps on Windows and Linux; publishing to TestPyPI; GitHub Pages from the reader's side. Each is flagged where it appears |
 
 [`docs/roadmap.md`](docs/roadmap.md) has the whole list. [`PLAN.md`](PLAN.md) has the curriculum in detail, the research behind it, and the decisions made along the way.
 

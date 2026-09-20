@@ -287,3 +287,18 @@ Rules it exists to enforce:
 Five spec-only briefs (roguelike; asyncio multiplayer Snake server; a deployed teletext news service, static or hosted; a demake in Pyxel or on the micro; a 6502 emulator, with Dormann's test and BBC BASIC as the stretch), general advice, a table of the rest of the Python world, and an invitation to contribute to open source. No code, no solutions, by design.
 
 **Owes:** the appendices: Python for BBC BASIC programmers, Coming-from sheets, gotchas gallery, Git/uv/VS Code cheat sheets (incl. the release ritual and the uv↔pip table), concept index, troubleshooting, glossary, what's new in 3.15.
+
+## Appendices
+
+Eight pages in `docs/appendices/`, none of which teaches anything new (the cheat sheets mark the handful of commands that the chapters didn't use as *new*):
+
+- `bbc-basic.md`: a Rosetta stone, BBC BASIC → Python, by theme, with the project for each row, and "what BASIC never had".
+- `coming-from.md`: five things for everybody, then tables for JavaScript/TypeScript, C#/Java and C.
+- `gotchas.md`: about thirty gotchas, each a `pycon` session that **the docs checker runs**, with the reason and the project; then a table of the ones that can't be shown in a REPL (files, Git, the web, packaging).
+- `cheat-sheets.md`: uv (and the uv↔older-tools table), Git by purpose (incl. the release ritual), pytest/ruff/pyright, VS Code keys, and "a new project, from nothing".
+- `concept-index.md`: concepts by theme → projects, using reference-style links `[P12]`.
+- `troubleshooting.md`: per-tool tables (uv/Python, VS Code, Git, Pygame, turtle, the web, the terminal). Carries the "Not yet verified first-hand" flag for its Windows and Linux advice.
+- `glossary.md`: about ninety terms, as definition lists.
+- `whats-new-315.md`: `frozendict`, `lazy import`, unpacking in comprehensions, UTF-8 by default, the sampling profiler, `math.integer`, closed `TypedDict`s; **every claim was run on 3.15.0rc2** (the examples are plain listings, since the checker runs 3.14).
+
+**The tutorial is complete.** What remains unverified first-hand is listed in the README's Progress table.
