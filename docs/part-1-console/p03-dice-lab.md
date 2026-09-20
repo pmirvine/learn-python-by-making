@@ -955,4 +955,4 @@ You can now:
 
 **Read more:** [More on lists](https://docs.python.org/3/tutorial/datastructures.html) · [Dictionaries](https://docs.python.org/3/tutorial/datastructures.html#dictionaries) · [`collections.Counter`](https://docs.python.org/3/library/collections.html#collections.Counter) · [Get started with pytest](https://docs.pytest.org/en/stable/getting-started.html) · [The Ruff tutorial](https://docs.astral.sh/ruff/tutorial/) · [Python testing in VS Code](https://code.visualstudio.com/docs/python/testing)
 
-You now have the core of everyday Python: numbers, strings, tuples, lists, dictionaries, functions, loops and comprehensions. Project 4 turns to a question that has been put off three times already. What happens when two names are tied to the same list, and one of them changes it?
+You now have the core of everyday Python: numbers, strings, tuples, lists, dictionaries, functions, loops and comprehensions. [Project 4](p04-codebreaker.md) turns to a question that has been put off three times already. What happens when two names are tied to the same list, and one of them changes it?
