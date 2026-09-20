@@ -1,0 +1,32 @@
+name: Publish
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v6
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10.1.0
+        with:
+          enable-cache: true
+      - run: uv sync --locked
+      - run: uv run pytest
+      - run: uv run pyfax content --out site
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: site
+      - uses: actions/deploy-pages@v5
+        id: deployment

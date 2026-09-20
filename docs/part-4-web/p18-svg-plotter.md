@@ -1060,4 +1060,4 @@ You can now:
 
 **Read more:** [PEP 750: template strings](https://peps.python.org/pep-0750/) · [`string.templatelib`](https://docs.python.org/3/library/string.templatelib.html) · [The format specification mini-language](https://docs.python.org/3/library/string.html#formatspec) · [MDN's SVG tutorial](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch) · [`http.server`](https://docs.python.org/3/library/http.server.html), including the warning at the top about what it isn't for · [OWASP on injection](https://owasp.org/Top10/A03_2021-Injection/) · [10 PRINT](https://10print.org/), a whole book about that one line of BASIC, which is free to read
 
-A page of pictures is a start. In Project 19 you'll build a whole site, of a kind that every British household once had on its television: forty columns, twenty-five rows, eight colours, and graphics made out of six little squares.
+A page of pictures is a start. In [Project 19](p19-pyfax.md) you'll build a whole site, of a kind that every British household once had on its television: forty columns, twenty-five rows, eight colours, and graphics made out of six little squares.

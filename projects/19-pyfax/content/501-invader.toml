@@ -1,0 +1,21 @@
+number = 501
+title = "Picture of the day"
+section = "fun"
+picture = """
+....#......#....
+.....#....#.....
+....########....
+...##.####.##...
+..############..
+..#.########.#..
+..#.#......#.#..
+.....##..##.....
+................
+"""
+body = """
+{magenta}An old friend
+
+Drawn in Project 15, and shown here at two pixels across and three down to every character, which is as fine as teletext gets.
+
+{green}News: 101   Weather: 301
+"""

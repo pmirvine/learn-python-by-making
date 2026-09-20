@@ -1,0 +1,56 @@
+/* PyFax. The colours and the graphics characters are added to the end of this
+   file when the site is built, since a program can work them out from their bits. */
+
+body {
+  margin: 0;
+  background: #111;
+  color: #888;
+  font-family: system-ui, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.screen {
+  /* A television was four units wide for every three high. */
+  width: min(100vw, 128vh);
+  aspect-ratio: 4 / 3;
+  display: grid;
+  grid-template-columns: repeat(40, 1fr);
+  grid-template-rows: repeat(25, 1fr);
+  background: #000;
+  font-family: "Bedstead", "Courier New", monospace;
+  font-size: min(2.4vw, 3.1vh);
+  font-weight: bold;
+  line-height: 1;
+}
+
+/* The rows are there for the sake of whoever reads the HTML. As far as the grid
+   is concerned, they aren't: their cells are laid out as if they were the
+   screen's own children. */
+.row {
+  display: contents;
+}
+
+.row > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  white-space: pre;
+  text-decoration: none;
+}
+
+.row > a:hover {
+  filter: invert(1);
+}
+
+/* A graphics character: each lit square is a block a half wide and a third high. */
+.m {
+  background-size: 50.5% 34%;
+  background-repeat: no-repeat;
+}
+
+.hint {
+  font-size: 0.9rem;
+}
