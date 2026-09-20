@@ -77,7 +77,9 @@ def test_bisecting_the_practice_history_finds_the_planted_commit(tmp_path):
     verdict = git(
         "bisect", "run", sys.executable, "-m", "pytest", "-q", "test_cell_at.py"
     )
-    assert "is the first bad commit" in verdict
+    # Newer versions of Git say "the first 'bad' commit", with quotation marks.
+    assert "8b17648" in verdict
+    assert "is the first" in verdict
     assert "Simplify cell_at" in verdict
 
 

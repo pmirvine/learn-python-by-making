@@ -801,7 +801,7 @@ bisect found first bad commit
 $ git bisect reset
 ```
 
-It took four runs of the test, a few seconds, and no thought. (The script fixes the author and the dates, so your hashes ought to be the same as these.) Now look at what that commit did:
+It took four runs of the test, a few seconds, and no thought. (The script fixes the author and the dates, so your hashes ought to be the same as these. The newest versions of Git put quotation marks round the word, as `the first 'bad' commit`.) Now look at what that commit did:
 
 ```console
 $ git show 8b17648
