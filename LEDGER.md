@@ -215,3 +215,13 @@ Rules it exists to enforce:
 **Repo notes:** FastAPI is in the root dev group for the Predicts. The live board and `/docs` were checked, and photographed, in headless Chrome.
 
 **Owes:** the PyScript/pygbag bonus next. P23 `datetime`, `subprocess`, Rich. P25 asyncio properly: tasks, `TaskGroup`, exception groups, threads vs processes vs async (and the threaded score post from Extend 3). P27 publishing a package, changelogs, releases in depth.
+
+## Bonus · Share it
+
+**Taught (optional; nothing later may depend on it):** WebAssembly and Pyodide in a paragraph; **PyScript 2026.7.3**: `<script type="py" src= config=>`, `pyscript.toml` `[files]`, `from pyscript import document, when`, calling the browser's canvas from Python, `@when("click", …)` as another registering decorator, **top-level `await`**, why a tab's single thread forces the loop to be `async` (P22's lesson made visible), what Pyodide can't do; **pygbag 0.9.3**: `async def main()` + `await asyncio.sleep(0)` + `asyncio.run`, `uvx pygbag folder` and `--build`, `main.py` in its own folder, click-to-start, Python 3.12/pygame-ce 2.5.7 in the browser, porting caveats. P6's `life` package runs unchanged (third front end; third payoff of pure rules after P13 and P21). Flagged as the least settled technology in the tutorial. No Predict, bug hunt or solutions, by design.
+
+**Hands on:** nothing. `projects/22x-share-it/` is a flat project: `life-in-a-tab/` (page, `pyscript.toml`, `main.py`), `make_site.py` (assembles `site/` from the page and P6's package), `cube-in-a-tab/main.py` (P14's type-in cube, made async).
+
+**Repo notes:** both pages were run in headless Chrome via `scripts/browser.py`, and both pictures are real screenshots. pygbag's loader can hang the DevTools connection for a while, so that check needs hard time-outs. `build/` is git-ignored.
+
+**Owes:** nothing. Part 5 next: P23 Rich Dashboard.

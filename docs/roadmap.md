@@ -62,7 +62,7 @@ The same ideas return in each medium, so you feel what good structure buys you.
 | :material-check: | [20 · PyFax Live — Flask](part-4-web/p20-pyfax-live.md) | Routes, blueprints and the application factory, forms, `sqlite3` and transactions, `httpx` and failure, caching, configuration and secrets | The test client and fixtures; faking a web service; debugging Flask |
 | :material-check: | [21 · Adventure Online — Flask and htmx](part-4-web/p21-adventure-online.md) | Sessions and cookies, partial pages with htmx, reusing the Project 5 engine, web security basics: XSS, CSRF, cookie flags, a content security policy | `.env` files; rebase |
 | :material-check: | [22 · High Score Server — FastAPI](part-4-web/p22-high-score-server.md) | Type hints at run time: pydantic and `Annotated`; FastAPI; `TypedDict`; a first `async def` and server-sent events; your games post their scores | API tests; versions, tags and releases |
-| | ★ Bonus: Share it | Python in the browser with PyScript and pygbag | |
+| :material-check: | [★ Bonus: Share it](part-4-web/bonus-share-it.md) | Python in the browser with PyScript and pygbag, and why the loop has to be `async` | |
 
 ## Part 5 · TUI: the terminal strikes back
 

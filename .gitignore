@@ -27,3 +27,6 @@ masterpiece.png
 
 # Pictures that the plotter examples draw
 pictures/
+
+# What pygbag builds
+build/

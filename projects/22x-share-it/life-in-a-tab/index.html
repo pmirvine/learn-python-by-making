@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Life, in a tab</title>
+  <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css">
+  <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+  <style>
+    body { background: #000; color: #0f0; font: 1rem monospace; text-align: center; }
+    canvas { border: 1px solid #0f0; image-rendering: pixelated; width: min(95vw, 640px); }
+    button { font: inherit; }
+  </style>
+</head>
+<body>
+  <h1>Life, in a tab</h1>
+  <canvas id="board" width="160" height="120"></canvas>
+  <p id="status">Fetching Python. The first time, that's a few seconds.</p>
+  <p><button id="again">New soup</button></p>
+  <script type="py" src="./main.py" config="./pyscript.toml"></script>
+</body>
+</html>

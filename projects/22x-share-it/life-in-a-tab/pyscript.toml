@@ -1,0 +1,7 @@
+# Which of our own files the page's Python needs. They're fetched from beside
+# the page, and put where `import life` will find them.
+[files]
+"./life/__init__.py" = "./life/__init__.py"
+"./life/core.py" = "./life/core.py"
+"./life/patterns.py" = "./life/patterns.py"
+"./life/render.py" = "./life/render.py"

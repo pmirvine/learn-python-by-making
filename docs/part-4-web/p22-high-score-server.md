@@ -991,6 +991,6 @@ You can now:
 
 **Read more:** [FastAPI's tutorial](https://fastapi.tiangolo.com/tutorial/), which is long, and very good · [pydantic](https://docs.pydantic.dev/latest/) · [`typing.TypedDict`](https://docs.python.org/3/library/typing.html#typing.TypedDict) and [`Annotated`](https://docs.python.org/3/library/typing.html#typing.Annotated) · [MDN: server-sent events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events) and [the canvas tutorial](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial) · [Semantic Versioning](https://semver.org/), which is one page · [`hmac`](https://docs.python.org/3/library/hmac.html)
 
-That's the end of Part 4. You've written pictures as text, a generator of static sites, two web applications and an API, and a game that talks to a server. There's one short, optional chapter left in this part, for anybody who'd like to see their Python running *inside* the browser, with no server at all.
+That's the end of Part 4. You've written pictures as text, a generator of static sites, two web applications and an API, and a game that talks to a server. There's [one short, optional chapter](bonus-share-it.md) left in this part, for anybody who'd like to see their Python running *inside* the browser, with no server at all.
 
 Then Part 5 goes back to where the tutorial began, to the terminal, which turns out to be capable of a good deal more than `print` and `input`.

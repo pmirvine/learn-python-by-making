@@ -36,8 +36,8 @@ Every chapter follows the same pattern: *Predict* the output of a few snippets; 
 
 | | |
 |---|---|
-| Written | **Part 0** (How to use this tutorial · The toolkit · Project 0) · **Part 1, complete** (Hi-Lo, Turtle Sketchbook, Dice Lab, Codebreaker, The Colossal Cupboard, Life, Fractal Factory) · **Part 2, complete** (Mode 2 Sketchpad, Snake, Breakout, SOUND & ENVELOPE, Asteroids, Life in Pixels, Wireframe, Sprite Editor, and the Pyxel side quest) · **Part 3, complete** (Logo, Tiny BASIC) · **Part 4, so far**: SVG Plotter, PyFax, PyFax Live, Adventure Online, High Score Server |
-| In progress | Part 4: the web, from SVG to Flask, htmx and FastAPI |
+| Written | **Part 0** (How to use this tutorial · The toolkit · Project 0) · **Part 1, complete** (Hi-Lo, Turtle Sketchbook, Dice Lab, Codebreaker, The Colossal Cupboard, Life, Fractal Factory) · **Part 2, complete** (Mode 2 Sketchpad, Snake, Breakout, SOUND & ENVELOPE, Asteroids, Life in Pixels, Wireframe, Sprite Editor, and the Pyxel side quest) · **Part 3, complete** (Logo, Tiny BASIC) · **Part 4, complete** (SVG Plotter, PyFax, PyFax Live, Adventure Online, High Score Server, and the "Share it" bonus) |
+| In progress | Part 5: the terminal strikes back, with Rich, Textual and asyncio |
 
 [`docs/roadmap.md`](docs/roadmap.md) has the whole list. [`PLAN.md`](PLAN.md) has the curriculum in detail, the research behind it, and the decisions made along the way.
 
