@@ -1,9 +1,16 @@
 name: Check
 
+# Every push is checked on Linux and Windows. macOS is added when the workflow
+# is run by hand (Actions → Check → Run workflow): macOS minutes are billed at
+# ten times the rate on a private repository, and the author works on a Mac, so
+# that platform is checked locally before every commit. Once the repository is
+# public, put macos-latest in the first list too.
+
 on:
   push:
     branches: [main]
   pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -15,7 +22,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
+        os: ${{ github.event_name == 'workflow_dispatch'
+          && fromJSON('["ubuntu-latest", "windows-latest", "macos-latest"]')
+          || fromJSON('["ubuntu-latest", "windows-latest"]') }}
     steps:
       - uses: actions/checkout@v7
       - uses: astral-sh/setup-uv@v10

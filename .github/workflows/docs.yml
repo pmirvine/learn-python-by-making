@@ -1,12 +1,15 @@
 name: Publish the site
 
-# Builds the tutorial and publishes it to GitHub Pages. Before the first run,
-# set the repository's Pages source to "GitHub Actions" (Settings → Pages),
-# and set site_url in zensical.toml.
+# Builds the tutorial and publishes it to GitHub Pages.
+#
+# Manual only for now: GitHub Pages isn't available for a private repository
+# on the free plan. When the repository goes public:
+#   1. set the Pages source to "GitHub Actions" (Settings → Pages);
+#   2. set site_url in zensical.toml;
+#   3. add a `push: branches: [main]` trigger below.
 
 on:
-  push:
-    branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: read

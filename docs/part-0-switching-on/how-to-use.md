@@ -42,7 +42,7 @@ Every project chapter has the same parts.
 - **Extend** — about an hour. Add a feature. Hints are there if you want them, folded away.
 - **Invent** — a description of something to build, and nothing else.
 
-Do at least the Tweaks. They're where reading turns into knowing. Solutions to the Tweak and Extend challenges are in each project's `solutions/` folder in the tutorial's repository, but a solution you've read is worth about a tenth of one you've found.
+Do at least the Tweaks. They're where reading turns into knowing. Solutions to the Tweak and Extend challenges are in each project's `solutions/` folder in [the tutorial's repository](https://github.com/pmirvine/learn-python-by-making), but a solution you've read is worth about a tenth of one you've found.
 
 **Recap** lists what you've learned, for ticking off, with links to the official documentation.
 
