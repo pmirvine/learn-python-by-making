@@ -1610,4 +1610,4 @@ You can now:
 
 That's the end of Part 2. You've written seven graphical programs, and a sound chip, and along the way you've covered the whole of Python's object system: classes, properties, the data model, protocols, composition and inheritance.
 
-Keep the sprite files. They come back in the final project, where the computer that you'll build has hardware sprites, which is more than the BBC Micro ever had. Before Part 3 there's [a short side quest](side-quest-pyxel.md), for anybody who'd like to see what a complete fantasy console looks like when somebody else has written it. Then it's on to languages: in Project 16 you'll write one.
+Keep the sprite files. They come back in the final project, where the computer that you'll build has hardware sprites, which is more than the BBC Micro ever had. Before Part 3 there's [a short side quest](side-quest-pyxel.md), for anybody who'd like to see what a complete fantasy console looks like when somebody else has written it. Then it's on to languages: in [Project 16](../part-3-interpreters/p16-logo.md) you'll write one.

@@ -1,0 +1,11 @@
+; Thirty-six squares, each turned a little further than the last.
+
+to square :size
+  repeat 4 [fd :size rt 90]
+end
+
+repeat 36 [
+  setpc 1 + remainder repcount 7
+  square 140
+  rt 10
+]

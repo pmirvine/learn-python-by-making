@@ -204,4 +204,4 @@ There are no solutions for these. Use the four places.
 
 **Read more:** [Pyxel's README](https://github.com/kitao/pyxel), which is also its reference manual · [PICO-8](https://www.lexaloffle.com/pico-8.php) and [TIC-80](https://tic80.com/), the fantasy consoles that started it, which are programmed in Lua · One of the [unguided briefs](../roadmap.md) at the end of the tutorial is a "demake" of a game that you love, for Pyxel
 
-That's Part 2. In Part 3 you stop writing programs *in* a language, and write the language. [Project 16](../roadmap.md) is Logo, the turtle's native tongue.
+That's Part 2. In Part 3 you stop writing programs *in* a language, and write the language. [Project 16](../part-3-interpreters/p16-logo.md) is Logo, the turtle's native tongue.

@@ -1,0 +1,15 @@
+; A tree, by recursion. Each branch is a smaller tree.
+
+to tree :size
+  if :size < 6 [stop]
+  setpc 3
+  if :size < 20 [setpc 2]
+  fd :size
+  lt 25  tree :size * 0.72
+  rt 50  tree :size * 0.72
+  lt 25
+  pu bk :size pd
+end
+
+pu setxy 0 -200 pd
+tree 110

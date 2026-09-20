@@ -50,7 +50,7 @@ The same ideas return in each medium, so you feel what good structure buys you.
 
 | | Project | Python you learn | Tool skill |
 |---|---|---|---|
-| | 16 · Logo — a turtle language | Tokenisers as generators, recursive descent, decorators, `raise … from` | Pull requests |
+| :material-check: | [16 · Logo — a turtle language](part-3-interpreters/p16-logo.md) | Decorators and `functools.wraps`, tokenisers as generators, recursive descent, `ChainMap` and the call stack, a `Protocol` with three implementations | Pull requests |
 | | 17 · Tiny BASIC — `10 PRINT "HELLO"` | ASTs with dataclasses and structural `match`, typing in depth, context managers | Coverage; CI; building and installing a tool |
 
 ## Part 4 · Web: pages as pictures
