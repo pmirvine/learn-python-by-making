@@ -43,6 +43,7 @@ nav = [
   ] },
   { "Part 3 · Interpreters" = [
     { "Project 16 · Logo" = "part-3-interpreters/p16-logo.md" },
+    { "Project 17 · Tiny BASIC" = "part-3-interpreters/p17-tiny-basic.md" },
   ] },
 ]
 

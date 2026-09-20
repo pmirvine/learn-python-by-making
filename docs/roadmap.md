@@ -51,7 +51,7 @@ The same ideas return in each medium, so you feel what good structure buys you.
 | | Project | Python you learn | Tool skill |
 |---|---|---|---|
 | :material-check: | [16 · Logo — a turtle language](part-3-interpreters/p16-logo.md) | Decorators and `functools.wraps`, tokenisers as generators, recursive descent, `ChainMap` and the call stack, a `Protocol` with three implementations | Pull requests |
-| | 17 · Tiny BASIC — `10 PRINT "HELLO"` | ASTs with dataclasses and structural `match`, typing in depth, context managers | Coverage; CI; building and installing a tool |
+| :material-check: | [17 · Tiny BASIC — `10 PRINT "HELLO"`](part-3-interpreters/p17-tiny-basic.md) | A syntax tree of dataclasses walked with `match`, precedence climbing, iterator classes, typing in depth, `@contextmanager` | Strict type checking; coverage; CI with GitHub Actions; building and installing a tool |
 
 ## Part 4 · Web: pages as pictures
 
