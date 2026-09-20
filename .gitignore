@@ -24,3 +24,6 @@ masterpiece.png
 
 # macOS
 .DS_Store
+
+# Pictures that the plotter examples draw
+pictures/

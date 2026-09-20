@@ -1941,4 +1941,4 @@ You can now:
 
 That's Part 3. You've written two programming languages, and the second will be back: in the final project it gets `MOVE` and `DRAW`, `SOUND` and `ENVELOPE`, sprites, and a Pygame window with a flashing cursor, and becomes a computer.
 
-First, there's the web. For five projects you'll make *pages*, which are pictures that are described in text and drawn by a browser. It begins in Part 4, with the simplest of them, and a pen plotter.
+First, there's the web. For five projects you'll make *pages*, which are pictures that are described in text and drawn by a browser. It begins in [Project 18](../part-4-web/p18-svg-plotter.md), with the simplest of them, and a pen plotter.

@@ -57,7 +57,7 @@ The same ideas return in each medium, so you feel what good structure buys you.
 
 | | Project | Python you learn | Tool skill |
 |---|---|---|---|
-| | 18 · SVG Plotter — `MOVE` and `DRAW` for the browser | f-strings, t-strings and escaping; writing a context manager | Live Preview |
+| :material-check: | [18 · SVG Plotter — `MOVE` and `DRAW` for the browser](part-4-web/p18-svg-plotter.md) | Building strings, format specifications, escaping and injection, t-strings, a context manager as a class, `http.server` | Live Preview |
 | | 19 · PyFax — a teletext-style site generator | The 40×25 page model, bit operations, Jinja2, CSS basics | GitHub Pages |
 | | 20 · PyFax Live — Flask | Routes, forms, sqlite3, fetching live data, configuration and secrets | Fixtures; debugging Flask |
 | | 21 · Adventure Online — Flask and htmx | Sessions, partial pages, reusing the Project 5 engine, web security basics | Rebase |

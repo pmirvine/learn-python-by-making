@@ -22,6 +22,7 @@ import logging
 import os
 import re
 import sys
+import tempfile
 import textwrap
 from dataclasses import dataclass
 from pathlib import Path
@@ -147,11 +148,20 @@ def significant(text: str) -> list[str]:
 
 
 def project_sources(path: Path) -> list[str]:
-    """The src folders of the project a chapter is about: p06-life.md -> projects/06-*/src."""
+    """The folders that a chapter's REPL sessions may import from.
+
+    p06-life.md -> projects/06-*/src, and its stages/ too, for a snapshot that
+    the chapter shows before the code reaches its final form.
+    """
     found = re.match(r"p(\d\d)-", path.name)
     if not found:
         return []
-    return [str(src) for src in (ROOT / "projects").glob(f"{found[1]}-*/src")]
+    projects = ROOT / "projects"
+    return [
+        str(folder)
+        for kind in ("src", "stages")
+        for folder in projects.glob(f"{found[1]}-*/{kind}")
+    ]
 
 
 def check_file(path: Path) -> list[str]:
@@ -160,7 +170,9 @@ def check_file(path: Path) -> list[str]:
     before = set(sys.modules)
     sys.path[:0] = sources
     try:
-        return check_blocks(path)
+        # Some sessions save files. Let them do it somewhere that doesn't matter.
+        with tempfile.TemporaryDirectory() as scratch, contextlib.chdir(scratch):
+            return check_blocks(path)
     finally:
         del sys.path[: len(sources)]
         for name in set(sys.modules) - before:

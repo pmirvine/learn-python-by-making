@@ -45,6 +45,9 @@ nav = [
     { "Project 16 · Logo" = "part-3-interpreters/p16-logo.md" },
     { "Project 17 · Tiny BASIC" = "part-3-interpreters/p17-tiny-basic.md" },
   ] },
+  { "Part 4 · Web" = [
+    { "Project 18 · SVG Plotter" = "part-4-web/p18-svg-plotter.md" },
+  ] },
 ]
 
 [project.theme]
