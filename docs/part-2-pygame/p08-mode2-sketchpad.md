@@ -1232,4 +1232,4 @@ You can now:
 
 **Read more:** [Pygame CE documentation](https://pyga.me/docs/) · [`pygame.draw`](https://pyga.me/docs/ref/draw.html) · [`pygame.Surface`](https://pyga.me/docs/ref/surface.html) · [The `global` statement](https://docs.python.org/3/reference/simple_stmts.html#the-global-statement) · [Why am I getting an UnboundLocalError?](https://docs.python.org/3/faq/programming.html#why-am-i-getting-an-unboundlocalerror-when-the-variable-has-a-value) · [VS Code: Python debugging](https://code.visualstudio.com/docs/python/debugging)
 
-You have a screen, and a way of drawing on it. Next, something to play: Project 9 is Snake, and with it comes the cure for everything that went wrong in this chapter.
+You have a screen, and a way of drawing on it. Next, something to play: [Project 9](p09-snake.md) is Snake, and with it comes the cure for everything that went wrong in this chapter.

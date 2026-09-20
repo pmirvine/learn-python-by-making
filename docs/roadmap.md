@@ -37,7 +37,7 @@ The same ideas return in each medium, so you feel what good structure buys you.
 | | Project | Python you learn | Tool skill |
 |---|---|---|---|
 | :material-check: | [8 · Mode 2 Sketchpad](part-2-pygame/p08-mode2-sketchpad.md) — your own `MOVE` and `DRAW` | The game loop, events, surfaces; module-level state and why it hurts | Debugging a running game |
-| | 9 · Snake | First classes, `deque`, enums, game states | Stash; `.gitignore` |
+| :material-check: | [9 · Snake](part-2-pygame/p09-snake.md) | First classes, `deque`, enums, game states | Stash; `.gitignore` |
 | | 10 · Breakout | Classes in depth: composition, properties, class methods, frozen dataclasses | Refactoring tools |
 | | 11 · SOUND & ENVELOPE — a tone synth and piano | Binary data, generators as oscillators, packages that depend on packages | Workspaces |
 | | 12 · Asteroids | The data model: a `Vector` with dunder methods; duck typing and `Protocol` | Merge conflicts |
