@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Sprite editor",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "sprite_editor.app",
+            "args": ["rocket.sprite", "-vv"],
+            "console": "integratedTerminal"
+        }
+    ]
+}

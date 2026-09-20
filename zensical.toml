@@ -38,6 +38,7 @@ nav = [
     { "Project 12 · Asteroids" = "part-2-pygame/p12-asteroids.md" },
     { "Project 13 · Life in Pixels" = "part-2-pygame/p13-life-in-pixels.md" },
     { "Project 14 · Wireframe" = "part-2-pygame/p14-wireframe.md" },
+    { "Project 15 · Sprite Editor" = "part-2-pygame/p15-sprite-editor.md" },
   ] },
 ]
 

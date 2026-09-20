@@ -43,7 +43,7 @@ The same ideas return in each medium, so you feel what good structure buys you.
 | :material-check: | [12 · Asteroids](part-2-pygame/p12-asteroids.md) | The data model: a `Vector` with dunder methods; duck typing and `Protocol` | Merge conflicts |
 | :material-check: | [13 · Life in Pixels](part-2-pygame/p13-life-in-pixels.md) | Reusing Project 6; regular expressions and parsing; profiling and optimisation | `git bisect` |
 | :material-check: | [14 · Wireframe — a rotating 3D ship viewer](part-2-pygame/p14-wireframe.md) | Matrices from `zip` and comprehensions, `@`, `__slots__`, `tomllib`, `match` on dictionaries | Snippets and tasks |
-| | 15 · Sprite Editor — with undo and redo | Event architecture, the command pattern, inheritance and ABCs, logging | Conditional breakpoints |
+| :material-check: | [15 · Sprite Editor — with undo and redo](part-2-pygame/p15-sprite-editor.md) | The command pattern, inheritance and ABCs (and when not to), callbacks, a file format of your own | `logging`; the debugger's call stack, watches and exception breakpoints |
 | | ★ Side quest: Pyxel | A fantasy console in fifty lines | |
 
 ## Part 3 · Interpreters: Python looks at language

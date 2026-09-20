@@ -18,6 +18,7 @@ Three checks, described for authors in STYLE.md:
 import contextlib
 import doctest
 import io
+import logging
 import os
 import re
 import sys
@@ -132,6 +133,10 @@ def run_snippet(code: str) -> str:
             exec(compile(code, "<predict>", "exec"), {"__name__": "__predict__"})  # noqa: S102
         except Exception as error:  # noqa: BLE001 - any error is part of the output
             print(f"{type(error).__name__}: {error}")
+        finally:
+            # A snippet that sets up logging mustn't leave it set up for the next one.
+            logging.getLogger().handlers.clear()
+            logging.getLogger().setLevel(logging.WARNING)
     return output.getvalue()
 
 
