@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Turtle Fanciers' Weekly</title>
+  <entry>
+    <title>FORWARD 100000: one turtle's journey</title>
+    <link href="https://turtles.example/journey"/>
+    <updated>2026-09-19T12:00:00Z</updated>
+  </entry>
+  <entry>
+    <title>Pen up, pen down: the great debate</title>
+    <link href="https://turtles.example/pen"/>
+  </entry>
+</feed>

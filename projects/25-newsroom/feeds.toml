@@ -1,0 +1,34 @@
+# The feeds that the newsroom follows. Add your own: most news sites, blogs and
+# podcasts have one, and it's usually linked from the bottom of the front page.
+
+[[feeds]]
+name = "BBC News"
+url = "https://feeds.bbci.co.uk/news/rss.xml"
+
+[[feeds]]
+name = "BBC Technology"
+url = "https://feeds.bbci.co.uk/news/technology/rss.xml"
+
+[[feeds]]
+name = "BBC Science"
+url = "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml"
+
+[[feeds]]
+name = "NASA"
+url = "https://www.nasa.gov/feed/"
+
+[[feeds]]
+name = "Python Insider"
+url = "https://blog.python.org/feeds/posts/default"
+
+[[feeds]]
+name = "PyPI: new projects"
+url = "https://pypi.org/rss/packages.xml"
+
+[[feeds]]
+name = "xkcd"
+url = "https://xkcd.com/atom.xml"
+
+[[feeds]]
+name = "The Register"
+url = "https://www.theregister.com/headlines.atom"

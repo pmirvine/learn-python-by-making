@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>The Little Snoring Gazette</title>
+    <link>https://gazette.example/</link>
+    <item>
+      <title>Hedgehog wins village bake-off</title>
+      <link>https://gazette.example/hedgehog</link>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>
+        School robot   escapes again
+      </title>
+      <link>https://gazette.example/robot</link>
+    </item>
+    <item>
+      <title>Parish council &amp; the duck pond: a statement</title>
+      <link>https://gazette.example/pond</link>
+    </item>
+  </channel>
+</rss>

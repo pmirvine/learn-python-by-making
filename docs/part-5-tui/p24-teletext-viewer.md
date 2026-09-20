@@ -837,4 +837,4 @@ You can now:
 
 **Read more:** [Textual's tutorial and guide](https://textual.textualize.io/), which are very good · [The descriptor HOWTO](https://docs.python.org/3/howto/descriptor.html), by Raymond Hettinger, which builds `property`, methods and `classmethod` in pure Python · [Symbols for Legacy Computing](https://en.wikipedia.org/wiki/Symbols_for_Legacy_Computing), which has the sextants, and a good deal else from the machines of the 1980s · [`pytest-textual-snapshot`](https://github.com/Textualize/pytest-textual-snapshot)
 
-The viewer's pages are in files. Real teletext was *live*, with pages arriving all the time from different newsrooms. In Project 25 the viewer gets a newsroom of its own: a program that fetches a dozen feeds at once, without waiting for any of them, which means that it's time to learn `asyncio` properly.
+The viewer's pages are in files. Real teletext was *live*, with pages arriving all the time from different newsrooms. In [Project 25](p25-newsroom.md) the viewer gets a newsroom of its own: a program that fetches a dozen feeds at once, without waiting for any of them, which means that it's time to learn `asyncio` properly.

@@ -1,0 +1,39 @@
+[project]
+name = "newsroom"
+version = "0.1.0"
+description = "A teletext newsroom: a dozen live feeds, fetched at once, with asyncio."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "httpx>=0.28.1",
+    "pyfax",
+    "teleview",
+    "textual>=8,<9",
+]
+
+[project.scripts]
+newsroom = "newsroom.app:main"
+
+[build-system]
+requires = ["uv_build>=0.12.17,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv.sources]
+pyfax = { path = "../19-pyfax", editable = true }
+teleview = { path = "../24-teletext-viewer", editable = true }
+
+[dependency-groups]
+dev = [
+    "pyright>=1.1.414",
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+    "ruff>=0.16.8",
+]
+
+[tool.pytest]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+
+[tool.pyright]
+include = ["src"]
+typeCheckingMode = "strict"
