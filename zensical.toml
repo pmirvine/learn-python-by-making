@@ -35,6 +35,7 @@ nav = [
     { "Project 9 · Snake" = "part-2-pygame/p09-snake.md" },
     { "Project 10 · Breakout" = "part-2-pygame/p10-breakout.md" },
     { "Project 11 · SOUND & ENVELOPE" = "part-2-pygame/p11-sound-and-envelope.md" },
+    { "Project 12 · Asteroids" = "part-2-pygame/p12-asteroids.md" },
   ] },
 ]
 

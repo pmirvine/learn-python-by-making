@@ -1,0 +1,38 @@
+[project]
+name = "asteroids"
+version = "0.1.0"
+description = "Asteroids, in Pygame, with vectors of our own."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "beeb",
+    "pygame-ce>=2.5.8",
+]
+
+[project.scripts]
+asteroids = "asteroids.app:main"
+
+[build-system]
+requires = ["uv_build>=0.12.17,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv.sources]
+beeb = { path = "../11-sound-and-envelope", editable = true }
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.16.8",
+]
+
+[tool.pytest]
+testpaths = ["tests"]
+filterwarnings = [
+    # Pygame grumbles about this when tests run without a real display.
+    "ignore:no fast renderer available",
+]
+
+# Not part of a reader's project. The bug hunt's vector is written as a hurried
+# colleague would write it, and ruff has views on the return type of __iadd__.
+[tool.ruff.lint.per-file-ignores]
+"bughunt/fastvector.py" = ["PYI034"]

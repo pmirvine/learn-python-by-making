@@ -40,7 +40,7 @@ The same ideas return in each medium, so you feel what good structure buys you.
 | :material-check: | [9 · Snake](part-2-pygame/p09-snake.md) | First classes, `deque`, enums, game states | Stash; `.gitignore` |
 | :material-check: | [10 · Breakout](part-2-pygame/p10-breakout.md) | Classes in depth: composition, properties, class methods, frozen dataclasses | Refactoring tools |
 | :material-check: | [11 · SOUND & ENVELOPE](part-2-pygame/p11-sound-and-envelope.md) — a tone synth and piano | Binary data, generators as oscillators, packages that depend on packages | Path dependencies; workspaces |
-| | 12 · Asteroids | The data model: a `Vector` with dunder methods; duck typing and `Protocol` | Merge conflicts |
+| :material-check: | [12 · Asteroids](part-2-pygame/p12-asteroids.md) | The data model: a `Vector` with dunder methods; duck typing and `Protocol` | Merge conflicts |
 | | 13 · Life in Pixels | Reusing Project 6; parsing; profiling and optimisation | `git bisect` |
 | | 14 · Wireframe — a rotating 3D ship viewer | Matrices from `zip` and comprehensions, `@`, `__slots__`, `tomllib` | Snippets and tasks |
 | | 15 · Sprite Editor — with undo and redo | Event architecture, the command pattern, inheritance and ABCs, logging | Conditional breakpoints |
