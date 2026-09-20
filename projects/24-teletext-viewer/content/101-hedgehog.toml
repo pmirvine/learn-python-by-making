@@ -1,0 +1,12 @@
+number = 101
+title = "Hedgehog wins village bake-off"
+section = "news"
+body = """
+{cyan}Judges "astonished" by Victoria sponge
+
+A hedgehog from Little Snoring has taken first prize at the village's annual bake-off, beating last year's winner, Mrs Enid Parsley, into second place.
+
+"I've no idea how it got the oven door open," said Mrs Parsley, 74. "But fair's fair & it was a lovely sponge."
+
+{green}Weather for the fete: see 301
+"""

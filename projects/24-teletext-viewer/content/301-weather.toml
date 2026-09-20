@@ -1,0 +1,23 @@
+number = 301
+title = "Weather: the outlook"
+section = "weather"
+picture = """
+......####......
+....########....
+...##########...
+...##########...
+....########....
+......####......
+..#..#..#..#..#.
+.#..#..#..#..#..
+#..#..#..#..#...
+"""
+body = """
+{yellow}TODAY
+
+Cloud, then more cloud. Rain by teatime, with a 40% chance of drizzle < 3mm. Take a coat.
+
+{yellow}TOMORROW
+
+The same, but colder.
+"""

@@ -1,0 +1,12 @@
+number = 102
+title = "School robot escapes again"
+section = "news"
+body = """
+{cyan}Turtle found in staff car park
+
+A floor turtle belonging to St Swithin's Primary has been recovered after its third escape this term.
+
+The robot had been told to go FORWARD 100000 by a pupil in Year 4, who has been spoken to.
+
+{green}More news: 101
+"""

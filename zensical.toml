@@ -55,6 +55,7 @@ nav = [
   ] },
   { "Part 5 · The terminal" = [
     { "Project 23 · Rich Dashboard" = "part-5-tui/p23-rich-dashboard.md" },
+    { "Project 24 · Teletext Viewer" = "part-5-tui/p24-teletext-viewer.md" },
   ] },
 ]
 

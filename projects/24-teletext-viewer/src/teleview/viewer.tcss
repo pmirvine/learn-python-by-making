@@ -1,0 +1,23 @@
+/* Textual's stylesheets look like CSS, and work on widgets and not on elements. */
+
+Screen {
+    align: center middle;
+    background: #202030;
+}
+
+#set {
+    width: 40;
+    height: 25;
+    background: black;
+}
+
+Keypad {
+    height: 1;
+    color: white;
+    background: black;
+    text-style: bold;
+}
+
+PageView {
+    height: 24;
+}
