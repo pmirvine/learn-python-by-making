@@ -1,0 +1,26 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Tool caches
+.ruff_cache/
+.pytest_cache/
+
+# Secrets never belong in Git
+.env
+
+# The built docs site
+site/
+
+# Things the example programs save
+masterpiece.png
+
+# macOS
+.DS_Store

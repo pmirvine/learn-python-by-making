@@ -1,0 +1,22 @@
+[project]
+name = "learn-python-by-making"
+version = "0.1.0"
+description = "A project-based Python tutorial: console, Pygame, web and TUI."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+# Tools for building and checking the tutorial itself.
+# Each project under projects/ is a separate uv project with its own dependencies.
+[dependency-groups]
+dev = [
+    "pytest>=9.0",
+    "ruff>=0.16",
+    "zensical>=0.0.63",
+]
+
+[tool.pytest]
+testpaths = ["tests"]
+
+# No [tool.ruff] table here, on purpose. Ruff would apply it to every project
+# below, and they should be linted exactly as a reader's copy would be.
