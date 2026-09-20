@@ -230,18 +230,15 @@ class Game:
             ball.vy = -ball.vy
 
         if ball.vy > 0 and ball.rect.colliderect(self.bat.rect):
-            self.hit_bat()
+            ball.rect.bottom = self.bat.rect.top
+            ball.aim(
+                (ball.rect.centerx - self.bat.rect.centerx) / (self.bat.rect.width / 2)
+            )
 
         if ball.rect.top > self.settings.height:
             self.lose_life()
         elif self.level.cleared:
             self.next_level()
-
-    def hit_bat(self) -> None:
-        """Bounce the ball off the bat: the further from the middle, the wider the angle."""
-        bat, ball = self.bat.rect, self.ball
-        ball.rect.bottom = bat.top
-        ball.aim((ball.rect.centerx - bat.centerx) / (bat.width / 2))
 
     def hit_brick(self) -> bool:
         brick = self.level.hit_by(self.ball.rect)

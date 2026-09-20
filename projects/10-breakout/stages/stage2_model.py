@@ -4,10 +4,8 @@ Pygame's FRect is used for geometry, which needs no window, so everything in
 here can be tested without a screen.
 """
 
-import copy
 import math
 from dataclasses import dataclass
-from enum import Enum, auto
 from importlib import resources
 from pathlib import Path
 
@@ -157,113 +155,3 @@ class Ball:
     def __repr__(self) -> str:
         x, y = self.rect.center
         return f"Ball(at=({x:.0f}, {y:.0f}), velocity=({self.vx:.0f}, {self.vy:.0f}))"
-
-
-class State(Enum):
-    SERVE = auto()
-    PLAYING = auto()
-    GAME_OVER = auto()
-    WON = auto()
-
-
-class Game:
-    """One game of Breakout: a bat, a ball, some levels, a score and some lives."""
-
-    def __init__(
-        self, levels: list[Level] | None = None, settings: Settings | None = None
-    ) -> None:
-        self.settings = settings or Settings()
-        self.levels = levels if levels is not None else Level.built_in()
-        self.best = 0
-        self.restart()
-
-    def restart(self) -> None:
-        """Begin again from the first level."""
-        self.number = 0
-        self.score = 0
-        self.lives = self.settings.lives
-        self.walls = copy.deepcopy(self.levels)
-        self.new_ball()
-
-    @property
-    def level(self) -> Level:
-        return self.walls[self.number]
-
-    def new_ball(self) -> None:
-        """Put a new bat in the middle, with a new ball sitting on it."""
-        self.bat = Bat(self.settings)
-        self.ball = Ball(self.settings.ball_size, self.settings.ball_speed)
-        self.ball.rect.midbottom = self.bat.rect.midtop
-        self.state = State.SERVE
-
-    def serve(self) -> None:
-        """Launch the ball, or start again after the game has ended."""
-        if self.state is State.SERVE:
-            self.ball.aim(0.3)
-            self.state = State.PLAYING
-        elif self.state in (State.GAME_OVER, State.WON):
-            self.restart()
-
-    def update(self, seconds: float, steer: int = 0) -> None:
-        """Let some time go by, with the bat being steered left (-1) or right (1)."""
-        if self.state in (State.GAME_OVER, State.WON):
-            return
-        self.bat.move(steer, seconds)
-        if self.state is State.SERVE:
-            self.ball.rect.midbottom = self.bat.rect.midtop
-            return
-
-        seconds = min(seconds, 1 / 30)
-        ball, width = self.ball, self.settings.width
-
-        # Move across, and then up or down, so that we know which side was hit.
-        step = ball.vx * seconds
-        ball.rect.x += step
-        if ball.rect.left < 0 or ball.rect.right > width or self.hit_brick():
-            ball.rect.x -= step
-            ball.vx = -ball.vx
-
-        step = ball.vy * seconds
-        ball.rect.y += step
-        if ball.rect.top < 0 or self.hit_brick():
-            ball.rect.y -= step
-            ball.vy = -ball.vy
-
-        if ball.vy > 0 and ball.rect.colliderect(self.bat.rect):
-            self.hit_bat()
-
-        if ball.rect.top > self.settings.height:
-            self.lose_life()
-        elif self.level.cleared:
-            self.next_level()
-
-    def hit_bat(self) -> None:
-        """Bounce the ball off the bat: the further from the middle, the wider the angle."""
-        bat, ball = self.bat.rect, self.ball
-        ball.rect.bottom = bat.top
-        ball.aim((ball.rect.centerx - bat.centerx) / (bat.width / 2))
-
-    def hit_brick(self) -> bool:
-        brick = self.level.hit_by(self.ball.rect)
-        if brick is None:
-            return False
-        self.score += brick.points
-        self.best = max(self.best, self.score)
-        self.ball.speed = min(
-            self.ball.speed * self.settings.speed_up, self.settings.top_speed
-        )
-        return True
-
-    def lose_life(self) -> None:
-        self.lives -= 1
-        if self.lives == 0:
-            self.state = State.GAME_OVER
-        else:
-            self.new_ball()
-
-    def next_level(self) -> None:
-        if self.number + 1 == len(self.walls):
-            self.state = State.WON
-        else:
-            self.number += 1
-            self.new_ball()

@@ -847,4 +847,4 @@ You can now:
 
 **Read more:** [Classes](https://docs.python.org/3/tutorial/classes.html), in the Python tutorial · [`collections.deque`](https://docs.python.org/3/library/collections.html#collections.deque) · [`pygame.font`](https://pyga.me/docs/ref/font.html) · [Fix your timestep!](https://gafferongames.com/post/fix_your_timestep/), the classic article on game clocks · [Pro Git: stashing](https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning) · [gitignore](https://git-scm.com/docs/gitignore)
 
-You've got classes. Project 10 is Breakout, which is made of nothing else: a bat, a ball, a wall of bricks. It's where you'll learn to make a class pleasant to *use*, with properties, class methods and a good `repr`, and to build a level out of a text file.
+You've got classes. [Project 10](p10-breakout.md) is Breakout, which is made of nothing else: a bat, a ball, a wall of bricks. It's where you'll learn to make a class pleasant to *use*, with properties, class methods and a good `repr`, and to build a level out of a text file.

@@ -18,6 +18,7 @@ Three checks, described for authors in STYLE.md:
 import contextlib
 import doctest
 import io
+import os
 import re
 import sys
 import textwrap
@@ -26,6 +27,12 @@ from pathlib import Path
 
 ROOT = Path(__file__).parent.parent
 DOCS = ROOT / "docs"
+
+# Pygame announces itself when it's first imported, which would look like
+# unexpected output to a doctest. It also mustn't try to open a window.
+os.environ["PYGAME_HIDE_SUPPORT_PROMPT"] = "1"
+os.environ.setdefault("SDL_VIDEODRIVER", "dummy")
+os.environ.setdefault("SDL_AUDIODRIVER", "dummy")
 
 FENCE = re.compile(r"^(?P<indent>\s*)(?P<ticks>`{3,})(?P<lang>[\w-]*)(?P<attrs>.*)$")
 MARKER = re.compile(

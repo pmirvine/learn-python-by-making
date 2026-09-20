@@ -10,7 +10,7 @@ from pathlib import Path
 
 import pytest
 
-pytest.importorskip("pygame", reason="needs the Project 9 environment")
+pytest.importorskip("snake", reason="needs the Project 9 environment")
 
 P09 = Path(__file__).parent.parent / "projects" / "09-snake"
 HEADLESS = Path(__file__).parent / "headless.py"
