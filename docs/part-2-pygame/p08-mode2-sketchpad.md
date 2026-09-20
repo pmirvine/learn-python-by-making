@@ -631,6 +631,8 @@ def mode2():
 
 Imports after other code are usually frowned on. Here there's a reason for it, and the comment gives it.
 
+You've used fixtures that come with pytest: `tmp_path` in Project 5, and `capsys` in Project 6. `@pytest.fixture` makes one of your own. Any test that names `mode2` as a parameter has this function run for it first. And a fixture that's defined in `conftest.py` is available to every test file in the folder, with no import needed.
+
 The coordinate tests could hardly be simpler. `to_pixel` is pure, so you call it and look at the answer. No screen, no set-up, nothing to clear up afterwards.
 
 <!-- listing: projects/08-mode2-sketchpad/tests/test_coords.py -->
@@ -766,7 +768,7 @@ Most of it you've met. A line is a list of four numbers, `x1, y1, x2, y2`, each 
 
 `del trail[:-TRAIL]` deletes all but the last 24 entries, and does nothing at all while there are fewer than that. It's a slice from Project 3, on the left of a `del`.
 
-`type Line = list[float]` is a *type alias*, a name for a type, so that the hints say what you mean. There's a good deal more about them in Project 17.
+`type Line = list[float]` is a type alias, as `Cell` was in Project 6 and `Field` in Project 7, so that the hints say what you mean. There's a good deal more about them in Project 17.
 
 And `main` has the shape of every game you'll write in Part 2: **update the world, clear the screen, draw everything, `vsync`**. Nothing is ever rubbed out. The whole frame is drawn again from scratch, fifty times a second. It feels extravagant, and it's how nearly all games work. It's also simpler to get right than erasing things.
 

@@ -30,7 +30,7 @@ The same ideas return in each medium, so you feel what good structure buys you.
 | :material-check: | [4 · Codebreaker](part-1-console/p04-codebreaker.md) — Mastermind meets Wordle, in colour | Strings and Unicode, sets, mutability and aliasing, `is` and `==` | Undoing things in Git; first bug hunt |
 | :material-check: | [5 · The Colossal Cupboard](part-1-console/p05-colossal-cupboard.md) — a text adventure | Dataclasses, enums, `match`, modules, exceptions, files and JSON | Packaged layout; branches |
 | :material-check: | [6 · Life](part-1-console/p06-life.md) — Conway's Game of Life in the terminal | Sets of tuples, generators, itertools, command-line arguments | GitHub; parametrised tests |
-| | 7 · Fractal Factory — Mandelbrot and friends, to PNG | Numbers in depth, first-class functions, closures, `*args` and `**kwargs` | Profiling; tags |
+| :material-check: | [7 · Fractal Factory](part-1-console/p07-fractal-factory.md) — Mandelbrot and friends, to PNG | Numbers in depth, first-class functions, closures, `*args` and `**kwargs` | Profiling; tags |
 
 ## Part 2 · Pygame: objects in motion
 
