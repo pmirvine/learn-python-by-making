@@ -775,4 +775,4 @@ You can now:
 
 **Read more:** [`for` statements and `range`](https://docs.python.org/3/tutorial/controlflow.html#for-statements) · [More on defining functions](https://docs.python.org/3/tutorial/controlflow.html#more-on-defining-functions) · [Tuples and sequences](https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences) · [The `turtle` module](https://docs.python.org/3/library/turtle.html) · [VS Code: debugging](https://code.visualstudio.com/docs/debugtest/debugging)
 
-Two projects in, and you've been taking it on trust that your programs work, because you ran them and they looked all right. Project 3 is about collections of data: lists and dictionaries. It's also where you start to *prove* that your code works, with tests.
+Two projects in, and you've been taking it on trust that your programs work, because you ran them and they looked all right. [Project 3](p03-dice-lab.md) is about collections of data: lists and dictionaries. It's also where you start to *prove* that your code works, with tests.

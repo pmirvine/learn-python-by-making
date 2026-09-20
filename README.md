@@ -36,7 +36,7 @@ Every chapter follows the same pattern: *Predict* the output of a few snippets; 
 
 | | |
 |---|---|
-| Written | Part 0 (How to use this tutorial · The toolkit · Project 0) · Projects 1 and 2 (Hi-Lo, Turtle Sketchbook) · Project 8 Mode 2 Sketchpad |
+| Written | Part 0 (How to use this tutorial · The toolkit · Project 0) · Projects 1 to 3 (Hi-Lo, Turtle Sketchbook, Dice Lab) · Project 8 Mode 2 Sketchpad |
 | In progress | The rest of Part 1 |
 
 [`docs/roadmap.md`](docs/roadmap.md) has the whole list. [`PLAN.md`](PLAN.md) has the curriculum in detail, the research behind it, and the decisions made along the way.

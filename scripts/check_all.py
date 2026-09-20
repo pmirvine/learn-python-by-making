@@ -39,8 +39,10 @@ def check_project(project: Path) -> None:
     run("ruff check", [*ruff, "check", "."], project)
     run("ruff format --check", [*ruff, "format", "--check", "."], project)
 
-    if (project / "tests").is_dir():
-        run("project tests", ["uv", "run", "pytest", "-q"], project)
+    # A reader's tests live in tests/, or beside the code in the early, flat projects.
+    if (project / "tests").is_dir() or list(project.glob("test_*.py")):
+        ignore = [f"--ignore={folder}" for folder in ("stages", "bughunt", "solutions")]
+        run("project tests", ["uv", "run", "pytest", "-q", *ignore], project)
     if list((project / "solutions").rglob("test_*.py")):
         run("solutions tests", ["uv", "run", "pytest", "-q", "solutions"], project)
 

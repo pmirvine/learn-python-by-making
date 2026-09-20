@@ -1,0 +1,18 @@
+[project]
+name = "dice-lab"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.16.8",
+]
+
+# Not part of a reader's project. Stage 3's snapshot is the code as it stands
+# *before* the chapter runs ruff over it, and ruff has something to say about it.
+[tool.ruff.lint.per-file-ignores]
+"stages/stage3.py" = ["RUF007"]
