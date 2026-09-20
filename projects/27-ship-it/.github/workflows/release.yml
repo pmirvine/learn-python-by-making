@@ -1,0 +1,41 @@
+name: Release
+
+# Runs when a tag such as v1.0.0 is pushed.
+on:
+  push:
+    tags: ["v*"]
+
+jobs:
+  check:
+    uses: ./.github/workflows/check.yml
+
+  publish:
+    name: Publish to TestPyPI
+    needs: check
+    runs-on: ubuntu-latest
+    environment: testpypi
+    permissions:
+      id-token: write # lets TestPyPI check that this really is your repository
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10.1.0
+      - name: The tag and the version must agree
+        run: test "v$(uv version --short)" = "${{ github.ref_name }}"
+      - run: uv build
+      - run: uv publish --index testpypi
+
+  release:
+    name: Make the GitHub release
+    needs: publish
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10.1.0
+      - run: uv build
+      - name: Take this version's section out of the changelog
+        run: uv run --no-project scripts/notes.py "$(uv version --short)" > notes.md
+      - run: gh release create "${{ github.ref_name }}" dist/* --title "${{ github.ref_name }}" --notes-file notes.md
+        env:
+          GH_TOKEN: ${{ github.token }}

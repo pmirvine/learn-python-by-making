@@ -85,8 +85,13 @@ def main() -> None:
         if not wanted or any(project.name.startswith(prefix) for prefix in wanted):
             check_project(project)
             # A project may hold another inside it: Project 11 has a Breakout
-            # that depends on the beeb package in the folder above it.
-            for nested in sorted(project.glob("*/pyproject.toml")):
+            # that depends on the beeb package in the folder above it, and
+            # Project 27's bug hunt is a whole package with a fault in it.
+            inside = [
+                *project.glob("*/pyproject.toml"),
+                *project.glob("bughunt/*/pyproject.toml"),
+            ]
+            for nested in sorted(inside):
                 check_project(nested.parent)
     if not wanted:
         check_tutorial()

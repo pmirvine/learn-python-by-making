@@ -59,6 +59,9 @@ nav = [
     { "Project 25 · Newsroom" = "part-5-tui/p25-newsroom.md" },
     { "Project 26 · Adventure, Third Edition" = "part-5-tui/p26-adventure-third-edition.md" },
   ] },
+  { "Part 6 · Shipping it" = [
+    { "Project 27 · Ship It" = "part-6-shipping/p27-ship-it.md" },
+  ] },
 ]
 
 [project.theme]

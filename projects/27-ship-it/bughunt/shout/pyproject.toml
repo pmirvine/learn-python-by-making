@@ -1,0 +1,29 @@
+[project]
+name = "shout"
+version = "0.1.0"
+description = "Says things, in a box."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+[project.scripts]
+shout = "shout:main"
+
+[build-system]
+requires = ["uv_build>=0.12.17,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "rich>=15.0.0",
+    "ruff>=0.16.8",
+]
+
+[tool.pytest]
+testpaths = ["tests"]
+
+# Not part of a reader's project. In this repository this project sits inside
+# another one, and without a table of its own, ruff would borrow its parent's.
+[tool.ruff]
+src = ["src"]

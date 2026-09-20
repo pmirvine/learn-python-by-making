@@ -1,0 +1,67 @@
+[project]
+name = "beeb-lpbm"
+version = "1.0.0"
+description = "MOVE, DRAW, PLOT, SOUND and ENVELOPE: BBC Micro-style graphics and sound, on Pygame."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "A. Reader" }]
+keywords = ["bbc micro", "retro", "graphics", "sound", "pygame", "education"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Education",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Multimedia :: Graphics",
+    "Topic :: Multimedia :: Sound/Audio :: Sound Synthesis",
+    "Typing :: Typed",
+]
+requires-python = ">=3.13"
+dependencies = ["pygame-ce>=2.5.2"]
+
+[project.urls]
+Homepage = "https://github.com/yourname/beeb"
+Changelog = "https://github.com/yourname/beeb/blob/main/CHANGELOG.md"
+Issues = "https://github.com/yourname/beeb/issues"
+
+[project.scripts]
+beeb = "beeb.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.12.17,<0.13.0"]
+build-backend = "uv_build"
+
+# The name that's installed is beeb-lpbm. The name that's imported is still beeb.
+[tool.uv.build-backend]
+module-name = "beeb"
+
+# Where `uv publish --index testpypi` sends things.
+[[tool.uv.index]]
+name = "testpypi"
+url = "https://test.pypi.org/simple/"
+publish-url = "https://test.pypi.org/legacy/"
+explicit = true
+
+[dependency-groups]
+dev = [
+    "pyright>=1.1.414",
+    "pytest>=9.1.1",
+    "ruff>=0.16.8",
+]
+
+[tool.pytest]
+testpaths = ["tests"]
+filterwarnings = [
+    # Pygame grumbles about this when tests run without a real display.
+    "ignore:no fast renderer available",
+]
+
+[tool.pyright]
+include = ["src"]
+typeCheckingMode = "strict"
+
+# Not part of a reader's project. In this repository the bug hunt is a whole project,
+# in a folder inside this one, and it's linted from its own folder, as a project apart.
+[tool.ruff]
+extend-exclude = ["bughunt/shout"]
