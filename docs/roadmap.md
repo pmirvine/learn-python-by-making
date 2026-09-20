@@ -39,7 +39,7 @@ The same ideas return in each medium, so you feel what good structure buys you.
 | :material-check: | [8 · Mode 2 Sketchpad](part-2-pygame/p08-mode2-sketchpad.md) — your own `MOVE` and `DRAW` | The game loop, events, surfaces; module-level state and why it hurts | Debugging a running game |
 | :material-check: | [9 · Snake](part-2-pygame/p09-snake.md) | First classes, `deque`, enums, game states | Stash; `.gitignore` |
 | :material-check: | [10 · Breakout](part-2-pygame/p10-breakout.md) | Classes in depth: composition, properties, class methods, frozen dataclasses | Refactoring tools |
-| | 11 · SOUND & ENVELOPE — a tone synth and piano | Binary data, generators as oscillators, packages that depend on packages | Workspaces |
+| :material-check: | [11 · SOUND & ENVELOPE](part-2-pygame/p11-sound-and-envelope.md) — a tone synth and piano | Binary data, generators as oscillators, packages that depend on packages | Path dependencies; workspaces |
 | | 12 · Asteroids | The data model: a `Vector` with dunder methods; duck typing and `Protocol` | Merge conflicts |
 | | 13 · Life in Pixels | Reusing Project 6; parsing; profiling and optimisation | `git bisect` |
 | | 14 · Wireframe — a rotating 3D ship viewer | Matrices from `zip` and comprehensions, `@`, `__slots__`, `tomllib` | Snippets and tasks |

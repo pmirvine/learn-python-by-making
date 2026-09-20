@@ -1,0 +1,38 @@
+[project]
+name = "breakout"
+version = "0.1.0"
+description = "Breakout, in Pygame, with sound from the beeb package."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "beeb",
+    "pygame-ce>=2.5.8",
+]
+
+[project.scripts]
+breakout = "breakout.app:main"
+
+[build-system]
+requires = ["uv_build>=0.12.17,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.16.8",
+]
+
+[tool.uv.sources]
+beeb = { path = "..", editable = true }
+
+[tool.pytest]
+testpaths = ["tests"]
+filterwarnings = [
+    # Pygame grumbles about this when tests run without a real display.
+    "ignore:no fast renderer available",
+]
+
+# Not part of a reader's project. In this repository this project sits inside
+# another one, and without a table of its own, ruff would borrow its parent's.
+[tool.ruff]
+src = ["src"]

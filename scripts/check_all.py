@@ -84,6 +84,10 @@ def main() -> None:
     for project in sorted(p for p in PROJECTS.iterdir() if p.is_dir()):
         if not wanted or any(project.name.startswith(prefix) for prefix in wanted):
             check_project(project)
+            # A project may hold another inside it: Project 11 has a Breakout
+            # that depends on the beeb package in the folder above it.
+            for nested in sorted(project.glob("*/pyproject.toml")):
+                check_project(nested.parent)
     if not wanted:
         check_tutorial()
 
