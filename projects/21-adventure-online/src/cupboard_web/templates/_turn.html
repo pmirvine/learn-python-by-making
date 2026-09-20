@@ -1,0 +1,6 @@
+<p class="typed">&gt; {{ text }}</p>
+<p class="reply">{{ reply }}</p>
+{% with swap = true %}
+  {% include "_status.html" %}
+  {% include "_prompt.html" %}
+{% endwith %}

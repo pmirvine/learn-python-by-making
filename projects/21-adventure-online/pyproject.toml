@@ -1,0 +1,32 @@
+[project]
+name = "cupboard-web"
+version = "0.1.0"
+description = "The Colossal Cupboard, in a browser, with Flask and htmx."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "cupboard",
+    "flask>=3.1.3",
+    "python-dotenv>=1.2.3",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.17,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv.sources]
+cupboard = { path = "../05-colossal-cupboard", editable = true }
+
+[dependency-groups]
+dev = [
+    "pyright>=1.1.414",
+    "pytest>=9.1.1",
+    "ruff>=0.16.8",
+]
+
+[tool.pytest]
+testpaths = ["tests"]
+
+[tool.pyright]
+include = ["src"]
+typeCheckingMode = "standard"

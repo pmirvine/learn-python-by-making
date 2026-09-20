@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% with swap = false %}{% include "_status.html" %}{% endwith %}
+
+<div id="transcript" aria-live="polite">
+  {% for line in get_flashed_messages() %}
+    <p class="{{ 'typed' if line.startswith('>') else 'reply' }}">{{ line }}</p>
+  {% else %}
+    <p class="reply">{{ scene }}</p>
+  {% endfor %}
+</div>
+
+<form method="post" action="{{ url_for('game.command') }}"
+      hx-post="{{ url_for('game.command') }}"
+      hx-target="#transcript" hx-swap="beforeend scroll:#transcript:bottom">
+  <input type="hidden" name="token" value="{{ token }}">
+  <label for="text">&gt;</label>
+  {% with swap = false %}{% include "_prompt.html" %}{% endwith %}
+  <button type="submit">Do it</button>
+</form>
+
+<form method="post" action="{{ url_for('game.restart') }}">
+  <input type="hidden" name="token" value="{{ token }}">
+  <button type="submit" class="quiet">Start again</button>
+</form>
+{% endblock %}

@@ -24,6 +24,7 @@ import re
 import sys
 import tempfile
 import textwrap
+import tomllib
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -156,12 +157,19 @@ def project_sources(path: Path) -> list[str]:
     found = re.match(r"p(\d\d)-", path.name)
     if not found:
         return []
-    projects = ROOT / "projects"
-    return [
-        str(folder)
-        for kind in ("src", "stages")
-        for folder in projects.glob(f"{found[1]}-*/{kind}")
-    ]
+    folders: list[Path] = []
+    for project in (ROOT / "projects").glob(f"{found[1]}-*"):
+        folders += [project / "src", project / "stages"]
+        # A project may depend on an earlier one by its path. Let sessions import that too.
+        settings = tomllib.loads(
+            (project / "pyproject.toml").read_text(encoding="utf-8")
+        )
+        for source in (
+            settings.get("tool", {}).get("uv", {}).get("sources", {}).values()
+        ):
+            if "path" in source:
+                folders.append((project / source["path"] / "src").resolve())
+    return [str(folder) for folder in folders if folder.is_dir()]
 
 
 def check_file(path: Path) -> list[str]:

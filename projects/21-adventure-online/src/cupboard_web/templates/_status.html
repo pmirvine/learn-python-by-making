@@ -1,0 +1,4 @@
+<p id="status" {% if swap %}hx-swap-oob="true"{% endif %}>
+  Moves: {{ state.moves }}
+  {% if state.won %}<strong>You've won!</strong>{% endif %}
+</p>

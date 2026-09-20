@@ -1,0 +1,64 @@
+body {
+  background: #000;
+  color: #3f3;
+  font: 1.1rem/1.5 "Courier New", monospace;
+  max-width: 44rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+h1 {
+  color: #ff0;
+  font-size: 1.3rem;
+}
+
+#status {
+  color: #0ff;
+  border-bottom: 1px solid #0ff;
+}
+
+#transcript {
+  height: 22rem;
+  overflow-y: auto;
+}
+
+.typed {
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.reply {
+  margin-top: 0;
+  white-space: pre-line; /* the game's replies have line breaks in them that matter */
+}
+
+form {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+input[name="text"] {
+  flex: 1;
+  font: inherit;
+  color: #fff;
+  background: #111;
+  border: 1px solid #3f3;
+  padding: 0.3rem;
+}
+
+button {
+  font: inherit;
+  color: #000;
+  background: #3f3;
+  border: 0;
+  padding: 0.3rem 1rem;
+  cursor: pointer;
+}
+
+button.quiet {
+  color: #3f3;
+  background: none;
+  text-decoration: underline;
+  padding: 0;
+}

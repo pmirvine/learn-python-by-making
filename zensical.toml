@@ -49,6 +49,7 @@ nav = [
     { "Project 18 · SVG Plotter" = "part-4-web/p18-svg-plotter.md" },
     { "Project 19 · PyFax" = "part-4-web/p19-pyfax.md" },
     { "Project 20 · PyFax Live" = "part-4-web/p20-pyfax-live.md" },
+    { "Project 21 · Adventure Online" = "part-4-web/p21-adventure-online.md" },
   ] },
 ]
 
