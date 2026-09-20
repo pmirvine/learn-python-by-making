@@ -44,7 +44,7 @@ The same ideas return in each medium, so you feel what good structure buys you.
 | :material-check: | [13 · Life in Pixels](part-2-pygame/p13-life-in-pixels.md) | Reusing Project 6; regular expressions and parsing; profiling and optimisation | `git bisect` |
 | :material-check: | [14 · Wireframe — a rotating 3D ship viewer](part-2-pygame/p14-wireframe.md) | Matrices from `zip` and comprehensions, `@`, `__slots__`, `tomllib`, `match` on dictionaries | Snippets and tasks |
 | :material-check: | [15 · Sprite Editor — with undo and redo](part-2-pygame/p15-sprite-editor.md) | The command pattern, inheritance and ABCs (and when not to), callbacks, a file format of your own | `logging`; the debugger's call stack, watches and exception breakpoints |
-| | ★ Side quest: Pyxel | A fantasy console in fifty lines | |
+| :material-check: | [★ Side quest: Pyxel](part-2-pygame/side-quest-pyxel.md) | A game for a fantasy console, in seventy lines; how to pick up an unfamiliar library | |
 
 ## Part 3 · Interpreters: Python looks at language
 

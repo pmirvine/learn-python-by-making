@@ -141,3 +141,11 @@ Rules it exists to enforce:
 **Hands on (the `sprite_editor` package):** `sprite_editor.sprite`: `Sprite(width, height, pixels)` with `sprite[x, y]`, `in`, `to_text`, `from_text`, `save`, `load`, `SpriteError`, `Cell`, `Colour` (0–7 BBC colours, `None` see-through); **the `.sprite` text format** (`sprite W H`, then rows of `.` and `0`–`7`, `#` comments), which **P28's capstone loads for its hardware sprites**; `sprite_editor.commands`: `Command` (ABC), `Paint`, `Flip`, `Shift`, `History`; `sprite_editor.shapes`: `cells_between`, `box`, `flood`; `sprite_editor.tools`: `Tool` (ABC), `Pencil`, `Eraser`, `ShapeTool` (ABC), `Line`, `Box`, `Bucket`, `Picker`; `sprite_editor.widgets`: `Button`, `Swatch`, `Canvas`, `PALETTE`. `examples/invader.sprite` and `examples/rocket.sprite`. `solutions/more_tools.py`: `FilledBox`, `Ellipse`, `Turn`.
 
 **Owes:** the Pyxel side quest next. P16 decorators, `functools.wraps`, a renderer `Protocol`, pull requests. P19 bits and `&`/`|` properly. P24 Textual, where subclassing widgets is the norm ("you'll see it again with Textual in Part 5"). P28 sprites come back as hardware sprites.
+
+## Side quest · Pyxel
+
+**Taught (optional; nothing later may depend on it):** what a fantasy console is; **framework vs library** ("a framework calls you"); `pyxel.run(update, draw)` as callbacks; module-with-a-screen design recognised from `turtle`/`beeb`; `btn` vs `btnp` = held vs pressed; frame-counted time vs measured time; **how to pick up an unfamiliar library** (quickstart, examples, reference, stubs/source; tutorials last); **`.pyi` stub files** (why `help()` is empty for a Rust-cored library while Pylance hover works); `str.maketrans`/`translate`; the P15 `.sprite` format loaded into Pyxel in four lines. No Predict, bug hunt or solutions, by design. Pyxel needs OpenGL and (on Linux) system SDL2, so CI runs the game against `tests/fakepyxel.py`; the real thing is exercised by `scripts/screenshots_p15x.py`, which needs a display.
+
+**Hands on:** nothing. `projects/15x-pyxel-side-quest/meteors.py` is a flat script.
+
+**Owes:** the bonus chapter after Part 4 (`pyxel app2html` was called "a preview"); the briefs chapter's Pyxel demake. Its closing link to Project 16 points at the roadmap until P16 exists.
