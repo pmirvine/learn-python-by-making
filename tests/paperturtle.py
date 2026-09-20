@@ -95,7 +95,7 @@ class _Screen:
 _screen = _Screen()
 
 
-def Screen() -> _Screen:  # noqa: N802 - the real module spells it this way
+def Screen() -> _Screen:
     return _screen
 
 
@@ -113,7 +113,9 @@ class Turtle:
     # --- moving ---------------------------------------------------------------
     def _line_to(self, x: float, y: float) -> None:
         if self.is_down:
-            _screen.items.append(("line", (self.x, self.y), (x, y), self.pen, self.size))
+            _screen.items.append(
+                ("line", (self.x, self.y), (x, y), self.pen, self.size)
+            )
         self.x, self.y = x, y
         if self.fill_points is not None:
             self.fill_points.append((x, y))
@@ -145,7 +147,9 @@ class Turtle:
     def setheading(self, angle: float) -> None:
         self.angle = angle % 360
 
-    def circle(self, radius: float, extent: float = 360, steps: int | None = None) -> None:
+    def circle(
+        self, radius: float, extent: float = 360, steps: int | None = None
+    ) -> None:
         steps = steps or max(12, int(abs(radius) * abs(extent) / 360 / 2))
         turn = extent / steps
         side = 2 * radius * math.sin(math.radians(turn) / 2)
