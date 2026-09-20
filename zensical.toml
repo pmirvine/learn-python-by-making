@@ -26,6 +26,7 @@ nav = [
     { "Project 2 · Turtle Sketchbook" = "part-1-console/p02-turtle-sketchbook.md" },
     { "Project 3 · Dice Lab" = "part-1-console/p03-dice-lab.md" },
     { "Project 4 · Codebreaker" = "part-1-console/p04-codebreaker.md" },
+    { "Project 5 · The Colossal Cupboard" = "part-1-console/p05-colossal-cupboard.md" },
   ] },
   { "Part 2 · Pygame" = [
     { "Project 8 · Mode 2 Sketchpad" = "part-2-pygame/p08-mode2-sketchpad.md" },
