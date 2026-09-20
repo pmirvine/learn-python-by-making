@@ -61,6 +61,8 @@ nav = [
   ] },
   { "Part 6 · Shipping it" = [
     { "Project 27 · Ship It" = "part-6-shipping/p27-ship-it.md" },
+    { "Project 28 · Boot to BASIC" = "part-6-shipping/p28-boot-to-basic.md" },
+    { "Where next" = "part-6-shipping/where-next.md" },
   ] },
 ]
 

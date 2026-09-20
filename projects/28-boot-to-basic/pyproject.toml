@@ -1,0 +1,51 @@
+[project]
+name = "micro"
+version = "0.1.0"
+description = "A home computer that never was: it boots to BASIC, and has sprites."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "beeb-lpbm>=1.1.0",
+    "pyfax",
+    "sprite-editor",
+    "tiny-basic",
+]
+
+[project.scripts]
+micro = "micro.app:main"
+
+[build-system]
+requires = ["uv_build>=0.12.17,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv.sources]
+beeb-lpbm = { path = "beeb", editable = true }
+pyfax = { path = "../19-pyfax", editable = true }
+sprite-editor = { path = "../15-sprite-editor", editable = true }
+tiny-basic = { path = "../17-tiny-basic", editable = true }
+
+[tool.pytest]
+testpaths = ["tests"]
+filterwarnings = [
+    # Pygame grumbles about this when tests run without a real display.
+    "ignore:no fast renderer available",
+]
+
+[tool.pyright]
+include = ["src"]
+typeCheckingMode = "strict"
+
+# Not part of a reader's project. In this repository, beeb 1.1.0 lives in a folder
+# inside this one, and it's linted from its own folder, as a project apart.
+[tool.ruff]
+extend-exclude = ["beeb"]
+
+[tool.ruff.lint.isort]
+known-third-party = ["beeb"]
+
+[dependency-groups]
+dev = [
+    "pyright>=1.1.414",
+    "pytest>=9.1.1",
+    "ruff>=0.16.8",
+]

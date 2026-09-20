@@ -100,7 +100,7 @@ Successfully built dist/beeb-0.2.0-py3-none-any.whl
 $ uv run python -m zipfile -l dist/beeb-0.2.0-py3-none-any.whl
 ```
 
-**A wheel is a zip file**, with a different ending. There are two folders in it. One is `beeb/`: your package, exactly as it is in `src/`. The other is `beeb-0.2.0.dist-info/`, and holds four small text files:
+**A wheel is a zip file**, with a different ending. There are two folders in it. One is `beeb/`: your package, exactly as it is in `src/`. *Everything* in that folder goes, and not only the Python: it's why Breakout's levels, in Project 10, and the ships of Project 14, were put inside their packages, where `importlib.resources` could find them wherever they were installed. The other is `beeb-0.2.0.dist-info/`, and holds four small text files:
 
 | | |
 |---|---|
@@ -1027,4 +1027,4 @@ You can now:
 
 **Read more:** [The Python Packaging User Guide](https://packaging.python.org/) · [Writing your `pyproject.toml`](https://packaging.python.org/en/latest/guides/writing-pyproject-toml/) · [Version specifiers](https://packaging.python.org/en/latest/specifications/version-specifiers/), which is PEP 440 as it stands today · [uv: building and publishing a package](https://docs.astral.sh/uv/guides/package/) · [Keep a Changelog](https://keepachangelog.com/) · [Semantic Versioning](https://semver.org/) · [Choose a License](https://choosealicense.com/) · [pre-commit](https://pre-commit.com/) · [Trusted publishers, on PyPI](https://docs.pypi.org/trusted-publishers/) · [Should you use upper bound version constraints?](https://iscinumpy.dev/post/bound-version-constraints/), by Henry Schreiner, which is long, and settles the matter
 
-You can build things, and you can ship them. One project remains, and it uses nearly everything. In Project 28 you'll build a computer: a little micro, in Pygame, that boots to a `>` prompt, runs the BASIC that you wrote in Project 17, draws with `MOVE` and `DRAW`, plays `SOUND` and `ENVELOPE`, has sprites that the real one never had, and ends with a game, typed in from a listing, in a language of your own, on a machine of your own.
+You can build things, and you can ship them. One project remains, and it uses nearly everything. In [Project 28](p28-boot-to-basic.md) you'll build a computer: a little micro, in Pygame, that boots to a `>` prompt, runs the BASIC that you wrote in Project 17, draws with `MOVE` and `DRAW`, plays `SOUND` and `ENVELOPE`, has sprites that the real one never had, and ends with a game, typed in from a listing, in a language of your own, on a machine of your own.

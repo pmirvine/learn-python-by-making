@@ -78,8 +78,8 @@ The same ideas return in each medium, so you feel what good structure buys you.
 | | Project | What happens |
 |---|---|---|
 | :material-check: | [27 · Ship It](part-6-shipping/p27-ship-it.md) | What's in a wheel, `pyproject.toml` field by field, version numbers in full, honest dependency bounds, READMEs, changelogs and licences, pre-commit hooks, CI that tests what you ship, publishing, releases from a tag, pip and venv |
-| | 28 · Capstone: boot to BASIC | A Pygame computer with a teletext-style screen that boots to a `>` prompt. Your Project 17 BASIC gains `MOVE`, `DRAW`, `PLOT`, `SOUND` and `ENVELOPE`, plus sprites with collision detection, loaded from your Project 15 sprite editor. Type in a game and `RUN` it. |
-| | Where next | Unguided briefs: a roguelike, a multiplayer game server, a deployed news service, and a 6502 emulator for the brave |
+| :material-check: | [28 · Capstone: boot to BASIC](part-6-shipping/p28-boot-to-basic.md) | A Pygame computer with a teletext-style screen that boots to a `>` prompt. Your Project 17 BASIC gains `MOVE`, `DRAW`, `PLOT`, `SOUND` and `ENVELOPE`, plus sprites with collision detection, loaded from your Project 15 sprite editor. Type in a game and `RUN` it. |
+| :material-check: | [Where next](part-6-shipping/where-next.md) | Unguided briefs: a roguelike, a multiplayer game server, a deployed news service, and a 6502 emulator for the brave |
 
 ## Appendices
 
