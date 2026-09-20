@@ -7,6 +7,7 @@ Each project under projects/ is linted and tested inside its own environment,
 from its own folder, so it behaves exactly as a reader's copy would.
 """
 
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -19,8 +20,16 @@ failures: list[str] = []
 
 def run(label: str, command: list[str | Path], cwd: Path) -> None:
     print(f"  {label:<28}", end="", flush=True)
+    # UTF-8 everywhere, whatever the platform's default: the projects print
+    # characters such as █ and ●, and Windows would otherwise choke on them.
     result = subprocess.run(
-        command, cwd=cwd, capture_output=True, text=True, check=False
+        command,
+        cwd=cwd,
+        capture_output=True,
+        encoding="utf-8",
+        errors="replace",
+        env=os.environ | {"PYTHONUTF8": "1"},
+        check=False,
     )
     if result.returncode == 0:
         print("ok")

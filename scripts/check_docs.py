@@ -55,7 +55,7 @@ def blocks_in(path: Path) -> list[Block]:
     blocks: list[Block] = []
     marker: tuple[str, str] | None = None
     box, box_indent = "", -1
-    lines = path.read_text().splitlines()
+    lines = path.read_text(encoding="utf-8").splitlines()
     i = 0
     while i < len(lines):
         line = lines[i]
@@ -148,7 +148,7 @@ def check_file(path: Path) -> list[str]:
             source = ROOT / arg
             if not source.is_file():
                 problems.append(f"{block.where}: no such file as {arg}")
-            elif complaint := check_listing(block, source.read_text()):
+            elif complaint := check_listing(block, source.read_text(encoding="utf-8")):
                 problems.append(f"{block.where}: listing of {arg} {complaint}")
         elif block.lang == "python" and "title=" in block.attrs and kind != "listing":
             problems.append(f"{block.where}: titled listing has no listing marker")

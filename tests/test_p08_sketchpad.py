@@ -60,7 +60,7 @@ def test_program_runs_for_a_hundred_frames(script):
 
 def test_the_test_card_runs(tmp_path):
     program = tmp_path / "test_card.py"
-    program.write_text("import beeb\n\nbeeb.main()\n")
+    program.write_text("import beeb\n\nbeeb.main()\n", encoding="utf-8")
     result = subprocess.run(
         [sys.executable, HEADLESS, program, "3"],
         capture_output=True,
