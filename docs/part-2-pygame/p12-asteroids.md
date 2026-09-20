@@ -1121,4 +1121,4 @@ You can now:
 
 **Read more:** [The data model](https://docs.python.org/3/reference/datamodel.html), which is the reference for every dunder method · [Emulating numeric types](https://docs.python.org/3/reference/datamodel.html#emulating-numeric-types) · [`typing.Protocol`](https://typing.python.org/en/latest/spec/protocol.html) · [PEP 572: assignment expressions](https://peps.python.org/pep-0572/) · [`pygame.math.Vector2`](https://pyga.me/docs/ref/math.html) · [Pro Git: basic merge conflicts](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging#_basic_merge_conflicts)
 
-Four games in, it's time to collect on a promise that was made in Project 6. The rules of Life that you wrote for the terminal knew nothing about terminals. In Project 13 they get a window, a mouse, and a universe that you can zoom, and you won't change a line of them.
+Four games in, it's time to collect on a promise that was made in Project 6. The rules of Life that you wrote for the terminal knew nothing about terminals. In [Project 13](p13-life-in-pixels.md) they get a window, a mouse, and a universe that you can zoom, and you won't change a line of them.
