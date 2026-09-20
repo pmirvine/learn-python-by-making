@@ -993,4 +993,4 @@ You can now:
 
 That's the end of Part 4. You've written pictures as text, a generator of static sites, two web applications and an API, and a game that talks to a server. There's [one short, optional chapter](bonus-share-it.md) left in this part, for anybody who'd like to see their Python running *inside* the browser, with no server at all.
 
-Then Part 5 goes back to where the tutorial began, to the terminal, which turns out to be capable of a good deal more than `print` and `input`.
+Then [Part 5](../part-5-tui/p23-rich-dashboard.md) goes back to where the tutorial began, to the terminal, which turns out to be capable of a good deal more than `print` and `input`.

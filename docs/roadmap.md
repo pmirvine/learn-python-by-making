@@ -68,7 +68,7 @@ The same ideas return in each medium, so you feel what good structure buys you.
 
 | | Project | Python you learn | Tool skill |
 |---|---|---|---|
-| | 23 · Rich Dashboard — statistics across all your projects | `subprocess`, `datetime`, `collections`, sort keys | |
+| :material-check: | [23 · Rich Dashboard — statistics across all your projects](part-5-tui/p23-rich-dashboard.md) | `subprocess`, `datetime` and time zones, `Counter` and `defaultdict`, sort keys and `operator`, Rich tables, `Live` and recording | Rich's `inspect`, tracebacks and logging handler |
 | | 24 · Teletext Viewer — Textual | Widgets, messages, reactive attributes, and the descriptors behind them | Snapshot tests |
 | | 25 · Newsroom — an async feeds client | asyncio properly: tasks, `TaskGroup`, exception groups; threads, processes and the GIL | Async tests |
 | | 26 · Adventure, Third Edition — Textual | One engine, three front ends: `Protocol` or ABC, and which way dependencies point | |

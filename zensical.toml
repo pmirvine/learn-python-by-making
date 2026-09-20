@@ -53,6 +53,9 @@ nav = [
     { "Project 22 · High Score Server" = "part-4-web/p22-high-score-server.md" },
     { "Bonus · Share it" = "part-4-web/bonus-share-it.md" },
   ] },
+  { "Part 5 · The terminal" = [
+    { "Project 23 · Rich Dashboard" = "part-5-tui/p23-rich-dashboard.md" },
+  ] },
 ]
 
 [project.theme]

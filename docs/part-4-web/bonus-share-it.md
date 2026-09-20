@@ -244,4 +244,4 @@ Your bigger games will need more care than the cube did. Every loop that waits, 
 
 **Read more:** [PyScript's documentation](https://docs.pyscript.net/) · [Pyodide](https://pyodide.org/), which is what's underneath · [pygbag](https://pygame-web.github.io/), whose wiki has the list of what needs changing in a game · [WebAssembly, explained by MDN](https://developer.mozilla.org/en-US/docs/WebAssembly/Guides/Concepts)
 
-That's the end of Part 4. Part 5 goes back to where the tutorial began, to the terminal, which turns out to be capable of a good deal more than `print` and `input`.
+That's the end of Part 4. Part 5 goes back to where the tutorial began, to the terminal, which turns out to be capable of a good deal more than `print` and `input`. It starts with [Project 23](../part-5-tui/p23-rich-dashboard.md).
