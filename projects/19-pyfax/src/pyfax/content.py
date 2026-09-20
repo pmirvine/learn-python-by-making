@@ -3,6 +3,7 @@
 import re
 import textwrap
 import tomllib
+from collections.abc import Iterable
 from dataclasses import dataclass
 from datetime import date
 from pathlib import Path
@@ -161,8 +162,12 @@ def index(articles: list[Article], today: date) -> Page:
     return page
 
 
-def pages(folder: Path, today: date) -> list[Page]:
-    """Return every page of the site: the index, and then the articles."""
+def pages(folder: Path, today: date, others: Iterable[int] = ()) -> list[Page]:
+    """Return every page of the site: the index, and then the articles.
+
+    `others` are the numbers of any pages that somebody else is going to make,
+    so that a mention of one of them can be made into a link.
+    """
     articles = load_all(folder)
-    known = {INDEX} | {article.number for article in articles}
+    known = {INDEX, *others} | {article.number for article in articles}
     return [index(articles, today)] + [lay_out(a, known, today) for a in articles]

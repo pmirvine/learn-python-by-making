@@ -466,6 +466,7 @@ Now the code that reads them, and lays them out. Create `src/pyfax/content.py`:
 import re
 import textwrap
 import tomllib
+from collections.abc import Iterable
 from dataclasses import dataclass
 from datetime import date
 from pathlib import Path
@@ -624,10 +625,14 @@ def index(articles: list[Article], today: date) -> Page:
     return page
 
 
-def pages(folder: Path, today: date) -> list[Page]:
-    """Return every page of the site: the index, and then the articles."""
+def pages(folder: Path, today: date, others: Iterable[int] = ()) -> list[Page]:
+    """Return every page of the site: the index, and then the articles.
+
+    `others` are the numbers of any pages that somebody else is going to make,
+    so that a mention of one of them can be made into a link.
+    """
     articles = load_all(folder)
-    known = {INDEX} | {article.number for article in articles}
+    known = {INDEX, *others} | {article.number for article in articles}
     return [index(articles, today)] + [lay_out(a, known, today) for a in articles]
 ```
 
@@ -762,11 +767,14 @@ Make a folder, `src/pyfax/templates`, and save this as `base.html`:
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}PyFax{% endblock %}</title>
   <link rel="stylesheet" href="style.css">
+  {% block head %}{% endblock %}
 </head>
 <body>
   {% block screen %}{% endblock %}
+  {% block scripts %}
   <p class="hint">Type a page number, or use the arrow keys.</p>
   <script src="pyfax.js"></script>
+  {% endblock %}
 </body>
 </html>
 ```
@@ -799,7 +807,7 @@ And this as `page.html`:
 
 There are two kinds of hole. **`{{ … }}`** means "work this out, and put the result here". **`{% … %}`** is an instruction: `for`, `if`, `block`, `extends`. Inside both, the language looks like Python, and isn't quite: `page.rows` might be an attribute or a dictionary key, and Jinja will try both.
 
-**`{% extends "base.html" %}` is template inheritance.** The base has the furniture that every page shares, and some named `block`s. A child template fills the blocks in, and gets everything else from its parent. If you change the base, every page on the site changes, and that's the point of having a generator at all.
+**`{% extends "base.html" %}` is template inheritance.** The base has the furniture that every page shares, and some named `block`s. (A block may have something in it already, as `scripts` has, and then a child that doesn't mention the block gets what's there.) A child template fills the blocks in, and gets everything else from its parent. If you change the base, every page on the site changes, and that's the point of having a generator at all.
 
 **`{{ cell | classes }}`** is a *filter*. The `|` passes the value on its left through the function on its right. `classes` is going to be a Python function of yours. Jinja has dozens of its own: `{{ title | upper }}`, `{{ items | length }}`, `{{ name | default("nobody") }}`.
 
@@ -1227,4 +1235,4 @@ You can now:
 
 **Read more:** [Jinja's template designer documentation](https://jinja.palletsprojects.com/en/stable/templates/) · [MDN: CSS grid layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout) · [The Python wiki on bitwise operators](https://wiki.python.org/moin/BitwiseOperators) · [`enum.IntFlag`](https://docs.python.org/3/library/enum.html#enum.IntFlag) · [GitHub Pages with a custom workflow](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages) · [The Teletext Archaeologist](https://www.teletextarchaeologist.org/), who recovers real pages from old video tapes · [edit.tf](https://edit.tf/), a teletext editor in the browser · [Bedstead](https://bjh21.me.uk/bedstead/), a free font that reproduces the teletext chip's letters, which the stylesheet will use if you have it installed
 
-A static site is the same for everybody, and only changes when you build it again. The real Ceefax had the football scores as they happened. For that you need a program which makes each page at the moment that somebody asks for it. In Project 20, PyFax gets a server: Flask, a database, a live weather forecast, and a page where the readers can write in.
+A static site is the same for everybody, and only changes when you build it again. The real Ceefax had the football scores as they happened. For that you need a program which makes each page at the moment that somebody asks for it. In [Project 20](p20-pyfax-live.md), PyFax gets a server: Flask, a database, a live weather forecast, and a page where the readers can write in.

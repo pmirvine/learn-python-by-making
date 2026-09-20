@@ -59,7 +59,7 @@ The same ideas return in each medium, so you feel what good structure buys you.
 |---|---|---|---|
 | :material-check: | [18 · SVG Plotter — `MOVE` and `DRAW` for the browser](part-4-web/p18-svg-plotter.md) | Building strings, format specifications, escaping and injection, t-strings, a context manager as a class, `http.server` | Live Preview |
 | :material-check: | [19 · PyFax — a teletext-style site generator](part-4-web/p19-pyfax.md) | Bit operations and `IntFlag`, the 40×25 page model, HTML and CSS basics, Jinja2, generating CSS, a link checker | GitHub Pages |
-| | 20 · PyFax Live — Flask | Routes, forms, sqlite3, fetching live data, configuration and secrets | Fixtures; debugging Flask |
+| :material-check: | [20 · PyFax Live — Flask](part-4-web/p20-pyfax-live.md) | Routes, blueprints and the application factory, forms, `sqlite3` and transactions, `httpx` and failure, caching, configuration and secrets | The test client and fixtures; faking a web service; debugging Flask |
 | | 21 · Adventure Online — Flask and htmx | Sessions, partial pages, reusing the Project 5 engine, web security basics | Rebase |
 | | 22 · High Score Server — FastAPI | Type hints at runtime, first `async def`; your games post their scores | API tests; releases |
 | | ★ Bonus: Share it | Python in the browser with PyScript and pygbag | |

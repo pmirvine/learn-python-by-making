@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}599 Write to us - PyFax{% endblock %}
+
+{% block head %}
+<style>
+  form { font: bold 1.2rem "Courier New", monospace; color: #fff; background: #000;
+         padding: 2rem; margin-top: 2rem; width: min(90vw, 34rem); }
+  h1 { color: #ff0; font-size: 1.4rem; margin-top: 0; }
+  label { display: block; color: #0ff; margin-top: 1rem; }
+  input, textarea { width: 100%; box-sizing: border-box; font: inherit;
+                    color: #fff; background: #00f; border: 0; padding: 0.4rem; }
+  button { font: inherit; margin-top: 1rem; padding: 0.4rem 1rem; border: 0;
+           color: #000; background: #0f0; cursor: pointer; }
+  .problem { color: #f00; }
+  a { color: #0ff; }
+</style>
+{% endblock %}
+
+{% block screen %}
+<form method="post">
+  <h1>P599 Write to PyFax</h1>
+  {% for problem in problems %}
+    <p class="problem">{{ problem }}</p>
+  {% endfor %}
+  <label for="name">Your name</label>
+  <input id="name" name="name" maxlength="20" value="{{ name }}" required>
+  <label for="message">Your letter, in 200 letters or fewer</label>
+  <textarea id="message" name="message" rows="5" maxlength="200" required>{{ message }}</textarea>
+  <button type="submit">Send</button>
+  <p><a href="500.html">Back to the letters: 500</a></p>
+</form>
+{% endblock %}
+
+{% block scripts %}{% endblock %}

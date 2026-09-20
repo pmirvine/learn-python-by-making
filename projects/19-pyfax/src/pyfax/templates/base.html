@@ -5,10 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}PyFax{% endblock %}</title>
   <link rel="stylesheet" href="style.css">
+  {% block head %}{% endblock %}
 </head>
 <body>
   {% block screen %}{% endblock %}
+  {% block scripts %}
   <p class="hint">Type a page number, or use the arrow keys.</p>
   <script src="pyfax.js"></script>
+  {% endblock %}
 </body>
 </html>

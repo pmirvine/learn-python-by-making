@@ -1,0 +1,32 @@
+[project]
+name = "pyfax-live"
+version = "0.1.0"
+description = "PyFax with a server: live weather, and letters from readers."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "flask>=3.1.3",
+    "httpx>=0.28.1",
+    "pyfax",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.17,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv.sources]
+pyfax = { path = "../19-pyfax", editable = true }
+
+[dependency-groups]
+dev = [
+    "pyright>=1.1.414",
+    "pytest>=9.1.1",
+    "ruff>=0.16.8",
+]
+
+[tool.pytest]
+testpaths = ["tests"]
+
+[tool.pyright]
+include = ["src"]
+typeCheckingMode = "standard"
