@@ -23,6 +23,7 @@ nav = [
   ] },
   { "Part 1 · Console" = [
     { "Project 1 · Hi-Lo" = "part-1-console/p01-hi-lo.md" },
+    { "Project 2 · Turtle Sketchbook" = "part-1-console/p02-turtle-sketchbook.md" },
   ] },
   { "Part 2 · Pygame" = [
     { "Project 8 · Mode 2 Sketchpad" = "part-2-pygame/p08-mode2-sketchpad.md" },

@@ -25,7 +25,7 @@ The same ideas return in each medium, so you feel what good structure buys you.
 | | Project | Python you learn | Tool skill |
 |---|---|---|---|
 | :material-check: | [1 · Hi-Lo](part-1-console/p01-hi-lo.md) — guess the number | Names and objects, core types, f-strings, `while`, truthiness, first exceptions | The commit rhythm; reading tracebacks |
-| | 2 · Turtle Sketchbook — spirographs and fractal trees | `for` and `range`, functions in depth, tuples, recursion | The debugger |
+| :material-check: | [2 · Turtle Sketchbook](part-1-console/p02-turtle-sketchbook.md) — spirographs and fractal trees | `for` and `range`, functions in depth, tuples, recursion | The debugger |
 | | 3 · Dice Lab — probability with text histograms | Lists, dicts, `Counter`, comprehensions, slicing, type hints | pytest; ruff |
 | | 4 · Codebreaker — Mastermind meets Wordle, in colour | Strings and Unicode, sets, mutability and aliasing, `is` and `==` | Undoing things in Git; first bug hunt |
 | | 5 · The Colossal Cupboard — a text adventure | Dataclasses, enums, `match`, modules, exceptions, files and JSON | Packaged layout; branches |

@@ -723,4 +723,4 @@ You can now:
 
 **Read more:** [An informal introduction to Python](https://docs.python.org/3/tutorial/introduction.html) · [More control flow tools](https://docs.python.org/3/tutorial/controlflow.html) · [Truth value testing](https://docs.python.org/3/library/stdtypes.html#truth-value-testing) · [The format specification mini-language](https://docs.python.org/3/library/string.html#formatspec) · [Pro Git: recording changes](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository)
 
-Next comes something to look at. In Project 2 you'll get a turtle to draw for you, and find out what Python functions can really do.
+Next comes something to look at. In [Project 2](p02-turtle-sketchbook.md) you'll get a turtle to draw for you, and find out what Python functions can really do.

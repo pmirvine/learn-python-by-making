@@ -10,6 +10,7 @@ dependencies = []
 # Each project under projects/ is a separate uv project with its own dependencies.
 [dependency-groups]
 dev = [
+    "pillow>=12.3.0",
     "pytest>=9.0",
     "ruff>=0.16",
     "zensical>=0.0.63",
