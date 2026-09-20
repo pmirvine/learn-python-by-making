@@ -36,7 +36,7 @@ Every chapter follows the same pattern: *Predict* the output of a few snippets; 
 
 | | |
 |---|---|
-| Written | **Part 0** (How to use this tutorial · The toolkit · Project 0) · **Part 1, complete** (Hi-Lo, Turtle Sketchbook, Dice Lab, Codebreaker, The Colossal Cupboard, Life, Fractal Factory) · **Part 2, so far**: Mode 2 Sketchpad, Snake, Breakout, SOUND & ENVELOPE, Asteroids, Life in Pixels |
+| Written | **Part 0** (How to use this tutorial · The toolkit · Project 0) · **Part 1, complete** (Hi-Lo, Turtle Sketchbook, Dice Lab, Codebreaker, The Colossal Cupboard, Life, Fractal Factory) · **Part 2, so far**: Mode 2 Sketchpad, Snake, Breakout, SOUND & ENVELOPE, Asteroids, Life in Pixels, Wireframe |
 | In progress | The rest of Part 2 |
 
 [`docs/roadmap.md`](docs/roadmap.md) has the whole list. [`PLAN.md`](PLAN.md) has the curriculum in detail, the research behind it, and the decisions made along the way.

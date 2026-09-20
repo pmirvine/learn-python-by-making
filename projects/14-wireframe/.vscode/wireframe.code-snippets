@@ -1,0 +1,29 @@
+{
+    "A face of a ship": {
+        "scope": "toml",
+        "prefix": "face",
+        "body": [
+            "[[faces]]",
+            "points = [${1:0}, ${2:1}, ${3:2}]",
+            "colour = \"${4|white,red,orange,gold,limegreen,cyan,violet|}\"",
+            "$0"
+        ],
+        "description": "One face of a ship: its corners, anticlockwise from outside"
+    },
+    "A test with a table of cases": {
+        "scope": "python",
+        "prefix": "ptest",
+        "body": [
+            "@pytest.mark.parametrize(",
+            "    (\"${1:given}\", \"${2:expected}\"),",
+            "    [",
+            "        ($3),",
+            "    ],",
+            ")",
+            "def test_${4:something}($1, $2):",
+            "    assert ${5:...} == $2",
+            "$0"
+        ],
+        "description": "A pytest test, parametrised"
+    }
+}

@@ -42,7 +42,7 @@ The same ideas return in each medium, so you feel what good structure buys you.
 | :material-check: | [11 · SOUND & ENVELOPE](part-2-pygame/p11-sound-and-envelope.md) — a tone synth and piano | Binary data, generators as oscillators, packages that depend on packages | Path dependencies; workspaces |
 | :material-check: | [12 · Asteroids](part-2-pygame/p12-asteroids.md) | The data model: a `Vector` with dunder methods; duck typing and `Protocol` | Merge conflicts |
 | :material-check: | [13 · Life in Pixels](part-2-pygame/p13-life-in-pixels.md) | Reusing Project 6; regular expressions and parsing; profiling and optimisation | `git bisect` |
-| | 14 · Wireframe — a rotating 3D ship viewer | Matrices from `zip` and comprehensions, `@`, `__slots__`, `tomllib` | Snippets and tasks |
+| :material-check: | [14 · Wireframe — a rotating 3D ship viewer](part-2-pygame/p14-wireframe.md) | Matrices from `zip` and comprehensions, `@`, `__slots__`, `tomllib`, `match` on dictionaries | Snippets and tasks |
 | | 15 · Sprite Editor — with undo and redo | Event architecture, the command pattern, inheritance and ABCs, logging | Conditional breakpoints |
 | | ★ Side quest: Pyxel | A fantasy console in fifty lines | |
 

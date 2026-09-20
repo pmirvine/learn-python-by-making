@@ -1,0 +1,29 @@
+name = "Dart"
+
+points = [
+    [0, 0, 48],
+    [-32, 0, -24],
+    [0, 10, -24],
+    [32, 0, -24],
+    [0, -10, -24],
+]
+
+[[faces]]
+points = [0, 1, 4]
+colour = "cyan"
+
+[[faces]]
+points = [0, 2, 1]
+colour = "deepskyblue"
+
+[[faces]]
+points = [0, 3, 2]
+colour = "steelblue"
+
+[[faces]]
+points = [0, 4, 3]
+colour = "lightskyblue"
+
+[[faces]]
+points = [1, 2, 3, 4]
+colour = "orange"

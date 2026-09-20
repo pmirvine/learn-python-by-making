@@ -863,4 +863,4 @@ You can now:
 
 **Read more:** [The regular expression HOWTO](https://docs.python.org/3/howto/regex.html) · [`re`](https://docs.python.org/3/library/re.html) · [regex101](https://regex101.com/), for trying patterns out (choose the Python flavour) · [`pygame.event`](https://pyga.me/docs/ref/event.html) · [Pro Git: debugging with Git](https://git-scm.com/book/en/v2/Git-Tools-Debugging-with-Git) · [The LifeWiki's account of RLE](https://conwaylife.com/wiki/Run_Length_Encoded)
 
-Everything in Part 2 so far has been flat. In Project 14 it gets a third dimension. A wireframe spaceship turns slowly in the dark, as one did on the title screen of the most famous game the BBC Micro ever had. It's all matrices, and Python has an operator set aside for those.
+Everything in Part 2 so far has been flat. In [Project 14](p14-wireframe.md) it gets a third dimension. A wireframe spaceship turns slowly in the dark, as one did on the title screen of the most famous game the BBC Micro ever had. It's all matrices, and Python has an operator set aside for those.

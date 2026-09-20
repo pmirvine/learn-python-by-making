@@ -1,0 +1,42 @@
+name = "Beacon"
+
+points = [
+    [0, 34, 0],
+    [0, -34, 0],
+    [20, 0, 0],
+    [-20, 0, 0],
+    [0, 0, 20],
+    [0, 0, -20],
+]
+
+[[faces]]
+points = [0, 2, 5]
+colour = "violet"
+
+[[faces]]
+points = [0, 3, 4]
+colour = "orchid"
+
+[[faces]]
+points = [0, 4, 2]
+colour = "plum"
+
+[[faces]]
+points = [0, 5, 3]
+colour = "magenta"
+
+[[faces]]
+points = [1, 2, 4]
+colour = "mediumorchid"
+
+[[faces]]
+points = [1, 3, 5]
+colour = "hotpink"
+
+[[faces]]
+points = [1, 4, 3]
+colour = "deeppink"
+
+[[faces]]
+points = [1, 5, 2]
+colour = "palevioletred"

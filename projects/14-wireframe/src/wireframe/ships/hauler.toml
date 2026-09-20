@@ -1,0 +1,48 @@
+name = "Hauler"
+
+points = [
+    [14, 0, 44],
+    [7, 9, 44],
+    [-7, 9, 44],
+    [-14, 0, 44],
+    [-7, -9, 44],
+    [7, -9, 44],
+    [28, 0, -36],
+    [14, 18, -36],
+    [-14, 18, -36],
+    [-28, 0, -36],
+    [-14, -18, -36],
+    [14, -18, -36],
+]
+
+[[faces]]
+points = [0, 1, 2, 3, 4, 5]
+colour = "yellowgreen"
+
+[[faces]]
+points = [0, 5, 11, 6]
+colour = "olivedrab"
+
+[[faces]]
+points = [0, 6, 7, 1]
+colour = "darkseagreen"
+
+[[faces]]
+points = [1, 7, 8, 2]
+colour = "mediumseagreen"
+
+[[faces]]
+points = [2, 8, 9, 3]
+colour = "seagreen"
+
+[[faces]]
+points = [3, 9, 10, 4]
+colour = "forestgreen"
+
+[[faces]]
+points = [4, 10, 11, 5]
+colour = "limegreen"
+
+[[faces]]
+points = [6, 11, 10, 9, 8, 7]
+colour = "slategray"
