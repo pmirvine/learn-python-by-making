@@ -1,0 +1,30 @@
+body {
+  background: #000;
+  color: #fff;
+  font: bold 1.1rem "Courier New", monospace;
+  text-align: center;
+}
+
+h1 {
+  color: #ff0;
+  letter-spacing: 0.3em;
+}
+
+canvas {
+  width: min(95vw, 640px);
+  image-rendering: pixelated;
+  border: 2px solid #0ff;
+}
+
+select {
+  font: inherit;
+  color: #000;
+  background: #0ff;
+  border: 0;
+  padding: 0.2rem;
+}
+
+.hint {
+  color: #888;
+  font-weight: normal;
+}

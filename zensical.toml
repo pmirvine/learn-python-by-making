@@ -50,6 +50,7 @@ nav = [
     { "Project 19 · PyFax" = "part-4-web/p19-pyfax.md" },
     { "Project 20 · PyFax Live" = "part-4-web/p20-pyfax-live.md" },
     { "Project 21 · Adventure Online" = "part-4-web/p21-adventure-online.md" },
+    { "Project 22 · High Score Server" = "part-4-web/p22-high-score-server.md" },
   ] },
 ]
 

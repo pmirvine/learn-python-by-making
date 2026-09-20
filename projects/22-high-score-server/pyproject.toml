@@ -1,0 +1,37 @@
+[project]
+name = "high-scores"
+version = "0.1.0"
+description = "A high-score server for your games, with FastAPI."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi[standard]>=0.141.1",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.17,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "httpx2>=2.13.0",
+    "pyright>=1.1.414",
+    "pytest>=9.1.1",
+    "ruff>=0.16.8",
+]
+
+[tool.pytest]
+testpaths = ["tests"]
+filterwarnings = [
+    # This one is inside Starlette's test client, and isn't ours to fix.
+    "ignore:The anyio.abc.BlockingPortal alias is deprecated",
+]
+
+[tool.pyright]
+include = ["src"]
+typeCheckingMode = "strict"
+
+# Not part of a reader's project. In this repository the online Snake lives in a
+# folder inside this one, and it's linted from its own folder, as a project apart.
+[tool.ruff]
+extend-exclude = ["snake-online"]
