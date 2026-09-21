@@ -1,15 +1,23 @@
 name: Publish the site
 
-# Builds the tutorial and publishes it to GitHub Pages.
-#
-# Manual only for now: GitHub Pages isn't available for a private repository
-# on the free plan. When the repository goes public:
-#   1. set the Pages source to "GitHub Actions" (Settings → Pages);
-#   2. set site_url in zensical.toml;
-#   3. add a `push: branches: [main]` trigger below.
+# Builds the tutorial and publishes it to GitHub Pages, whenever what it's built
+# from changes on main. The Pages source is set to "GitHub Actions" (Settings → Pages).
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - "docs/**"
+      - "zensical.toml"
+      - "pyproject.toml"
+      - "uv.lock"
+      - ".github/workflows/docs.yml"
   workflow_dispatch:
+
+# One deployment at a time, and let one that's under way finish.
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 permissions:
   contents: read

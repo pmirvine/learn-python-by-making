@@ -44,7 +44,9 @@ Every chapter follows the same pattern: *Predict* the output of a few snippets; 
 
 ## Reading it
 
-The tutorial is a website, built with [Zensical](https://zensical.org/) from the Markdown in `docs/`. To read it on your own machine you need [uv](https://docs.astral.sh/uv/getting-started/installation/) and nothing else:
+**Read it at [pmirvine.github.io/learn-python-by-making](https://pmirvine.github.io/learn-python-by-making/).**
+
+The tutorial is a website, built with [Zensical](https://zensical.org/) from the Markdown in `docs/`, and published by a GitHub Actions workflow whenever `main` changes. To read it on your own machine you need [uv](https://docs.astral.sh/uv/getting-started/installation/) and nothing else:
 
 ```console
 $ git clone https://github.com/pmirvine/learn-python-by-making.git

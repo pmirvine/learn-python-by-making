@@ -6,8 +6,7 @@
 [project]
 site_name = "Learn Python by Making"
 site_description = "A project-based Python tutorial: console, Pygame, web and terminal apps, with a BBC Micro accent."
-# Uncomment when the repository goes public and the site is published.
-# site_url = "https://pmirvine.github.io/learn-python-by-making/"
+site_url = "https://pmirvine.github.io/learn-python-by-making/"
 repo_url = "https://github.com/pmirvine/learn-python-by-making"
 repo_name = "pmirvine/learn-python-by-making"
 copyright = "Text: CC BY-SA 4.0. Code: MIT."
