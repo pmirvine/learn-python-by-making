@@ -38,7 +38,7 @@ Every chapter follows the same pattern: *Predict* the output of a few snippets; 
 |---|---|
 | Written | **Everything**: Part 0 (How to use this tutorial · The toolkit · Project 0), Parts 1 to 6 (Projects 1 to 28, with the Pyxel side quest and the "Share it" bonus), the "Where next" briefs, and eight appendices |
 | Checked | Every project's code, tests, listings, REPL sessions and Predict answers, on every push, on Linux and Windows. macOS is where it was written |
-| Not yet verified first-hand | VS Code's user-interface steps on Windows and Linux; publishing to TestPyPI; GitHub Pages from the reader's side. Each is flagged where it appears |
+| Not yet verified first-hand | VS Code's user-interface steps on Windows and Linux; publishing to TestPyPI; Project 19's own Pages workflow (the tutorial's site is published by one with the same steps, which runs). Each is flagged where it appears |
 
 [`docs/roadmap.md`](docs/roadmap.md) has the whole list. [`PLAN.md`](PLAN.md) has the curriculum in detail, the research behind it, and the decisions made along the way.
 

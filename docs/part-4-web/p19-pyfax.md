@@ -1103,7 +1103,7 @@ $ gh browse --settings
 When the run has finished, the address is on the Pages settings page, and in the run's summary. Send it to somebody.
 
 !!! bug "Not yet verified first-hand"
-    This tutorial's own repository is private while it's being written, and GitHub Pages isn't available for private repositories on the free plan, so this workflow has been checked against the documentation, and against the workflow that will publish the tutorial itself, and hasn't yet been run. The versions of the `actions/…` steps move on. If GitHub warns that one is out of date, put the number up.
+    The site that you're reading is published by a workflow with these same steps, at these same versions, and that one runs on every change. This exact file, which builds PyFax where that one builds the tutorial, has been checked against it and against the documentation, and hasn't itself been run by the author. The versions of the `actions/…` steps move on. If GitHub warns that one is out of date, put the number up.
 
 !!! warning "Gotcha"
     Look at the links in the templates: `href="style.css"`, and `href="{{ cell.link }}.html"`. They're **relative**: they mean "in the same folder as this page". An absolute link, such as `/style.css`, means "at the top of the site", and your site isn't at the top. It's at `/pyfax/`. Absolute links are the commonest reason for a site that works on your own machine and arrives on Pages with no styling. Relative links work everywhere.
